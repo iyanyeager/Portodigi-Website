@@ -3,19 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Julian Raditya Portfolio</title>
-  <meta name="description" content="website Portofolio Digital Julian Khasiib Raditya" />
-  <meta property="og:title" content="Julian Raditya Portfolio" />
-  <meta property="og:description" content="https://iyanyeager.github.io/Porto-Website" />
+  <title>Julian Raditya Portofolio</title>
+  <meta name="description" content="Portfolio of Julian Raditya" />
+  <meta property="og:title" content="Julian Raditya — STUDENTS TKJ &amp; INFORMATICS" />
+  <meta property="og:description" content="Portfolio of Julian Khasiib Raditya" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
 
-  <!-- Google Fonts: Bangers (Comic headlines), Space Grotesk (Tech display), Plus Jakarta Sans (Crisp body) -->
+  <!-- Google Fonts: Plus Jakarta Sans (Clean geometric body & display) & Space Grotesk (Tech mono) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
 
-  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
   <!-- Theme Initializer (prevents flash of incorrect theme) -->
   <script>
     (function () {
@@ -39,174 +38,133 @@
       theme: {
         extend: {
           fontFamily: {
-            comic: ['Bangers', 'cursive'],
-            mono: ['Space Grotesk', 'monospace'],
+            comic: ['"Plus Jakarta Sans"', 'sans-serif'], // Remapped to clean, high-impact sans-serif
+            display: ['"Space Grotesk"', 'sans-serif'],
+            mono: ['"Space Grotesk"', 'monospace'],
             sans: ['"Plus Jakarta Sans"', 'sans-serif'],
           },
           boxShadow: {
-            'brutal-sm': '2px 2px 0px 0px #000000',
-            'brutal': '4px 4px 0px 0px #000000',
-            'brutal-md': '6px 6px 0px 0px #000000',
-            'brutal-lg': '8px 8px 0px 0px #000000',
-            'brutal-xl': '12px 12px 0px 0px #000000',
-            'brutal-white': '4px 4px 0px 0px #ffffff',
+            'brutal-xs': '0 1px 2px 0 rgba(0, 0, 0, 0.04)',
+            'brutal-sm': '0 1px 3px 0 rgba(0, 0, 0, 0.06), 0 1px 2px -1px rgba(0, 0, 0, 0.06)',
+            'brutal': '0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -2px rgba(0, 0, 0, 0.05)',
+            'brutal-md': '0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.04)',
+            'brutal-lg': '0 20px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.04)',
+            'brutal-xl': '0 25px 50px -12px rgba(0, 0, 0, 0.12)',
+            'brutal-white': '0 4px 14px 0 rgba(255, 255, 255, 0.08)',
           },
         },
       },
     };
   </script>
 
-  <!-- Custom Comic / Neo-Brutalist Styling & Halftone Patterns -->
+  <!-- Clean, Simple & Modern Styling System -->
   <style>
-    /* Halftone Screentone Texture (Comic Print Effect) */
-    .halftone-bg {
-      background-image: radial-gradient(#000000 1.5px, transparent 1.5px);
-      background-size: 14px 14px;
-    }
-    .halftone-subtle {
-      background-image: radial-gradient(rgba(0, 0, 0, 0.25) 1px, transparent 1px);
-      background-size: 10px 10px;
+    /* Subtle Modern Dot Texture */
+    .halftone-bg, .halftone-subtle {
+      background-image: radial-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+      background-size: 24px 24px;
     }
     .grid-lines-bg {
-      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.08) 1px, transparent 1px),
-                        linear-gradient(to bottom, rgba(0, 0, 0, 0.08) 1px, transparent 1px);
-      background-size: 20px 20px;
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+                        linear-gradient(to bottom, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+      background-size: 32px 32px;
     }
-    .diagonal-stripes {
-      background: repeating-linear-gradient(
-        -45deg,
-        #000000,
-        #000000 8px,
-        #ffffff 8px,
-        #ffffff 16px
-      );
-    }
-    .diagonal-stripes-sm {
-      background: repeating-linear-gradient(
-        -45deg,
-        #000000,
-        #000000 4px,
-        #ffffff 4px,
-        #ffffff 8px
-      );
+    .diagonal-stripes, .diagonal-stripes-sm {
+      display: none !important;
     }
 
-    /* Comic Speech Bubble Tails */
-    .bubble-tail-bottom::after {
-      content: '';
-      position: absolute;
-      bottom: -14px;
-      left: 28px;
-      width: 0;
-      height: 0;
-      border-left: 10px solid transparent;
-      border-right: 10px solid transparent;
-      border-top: 14px solid #000000;
-    }
+    /* Disable Comic Speech Bubble Tails */
+    .bubble-tail-bottom::after,
     .bubble-tail-bottom::before {
-      content: '';
-      position: absolute;
-      bottom: -9px;
-      left: 31px;
-      width: 0;
-      height: 0;
-      border-left: 7px solid transparent;
-      border-right: 7px solid transparent;
-      border-top: 10px solid #ffffff;
-      z-index: 1;
+      display: none !important;
     }
 
-    /* Custom Comic Scrollbar */
+    /* Modern Minimalist Scrollbar */
     ::-webkit-scrollbar {
-      width: 12px;
-      height: 12px;
+      width: 8px;
+      height: 8px;
     }
     ::-webkit-scrollbar-track {
-      background: #ffffff;
-      border-left: 3px solid #000000;
+      background: transparent;
     }
     ::-webkit-scrollbar-thumb {
-      background: #000000;
-      border: 2px solid #ffffff;
+      background: rgba(0, 0, 0, 0.18);
+      border-radius: 9999px;
     }
     ::-webkit-scrollbar-thumb:hover {
-      background: #333333;
+      background: rgba(0, 0, 0, 0.32);
+    }
+    html.dark ::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.18);
+    }
+    html.dark ::-webkit-scrollbar-thumb:hover {
+      background: rgba(255, 255, 255, 0.35);
     }
 
-    /* Comic Pop Animation for clicks */
-    @keyframes comicPopAnim {
-      0% {
-        transform: translate(-50%, -50%) scale(0.4) rotate(var(--rot, 0deg));
-        opacity: 0;
-      }
-      50% {
-        transform: translate(-50%, -60%) scale(1.15) rotate(var(--rot, 0deg));
-        opacity: 1;
-      }
-      100% {
-        transform: translate(-50%, -90%) scale(0.9) rotate(var(--rot, 0deg));
-        opacity: 0;
-      }
+    /* Soft Modern Borders & Rounded Radii across components */
+    .border-4, .border-3 {
+      border-width: 1px !important;
     }
-    .comic-pop-particle {
-      position: fixed;
-      pointer-events: none;
-      z-index: 9999;
-      animation: comicPopAnim 0.75s cubic-bezier(0.18, 0.89, 0.32, 1.28) forwards;
+    .border-2 {
+      border-width: 1px !important;
+    }
+    .border-b-4 {
+      border-bottom-width: 1px !important;
+    }
+    .border-t-4 {
+      border-top-width: 1px !important;
+    }
+    .border-l-4 {
+      border-left-width: 2px !important;
     }
 
-    /* Comic Photo Card Floating Animation */
-    @keyframes comicCardFloat {
-      0%, 100% {
-        transform: translateY(0px) rotate(0deg);
-      }
-      50% {
-        transform: translateY(-8px) rotate(-1deg);
-      }
+    /* Modern hairline border color in light mode */
+    .border-black {
+      border-color: #e5e7eb !important;
     }
-    .animate-comic-float {
-      animation: comicCardFloat 5s ease-in-out infinite;
-    }
-    .animate-comic-float:hover {
-      animation-play-state: paused;
+    .border-black\/10,
+    .border-black\/15,
+    .border-black\/20 {
+      border-color: #f3f4f6 !important;
     }
 
-    /* Dynamic Comic Card Hover Lift & Shadows */
-    #avatarCard {
-      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    /* Modern card rounding & elevation */
+    .project-card,
+    #avatarCard,
+    .skill-group-card,
+    #education .group > div:last-child,
+    #projectModalCard,
+    #resumeModalCard,
+    #certModalCard {
+      border-radius: 16px !important;
+    }
+    .skill-badge-item,
+    button:not(.rounded-full),
+    a.nav-link {
+      border-radius: 8px !important;
+    }
+
+    /* Clean Card Hover Lift */
+    #avatarCard, .project-card, .skill-group-card {
+      transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.28s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.28s ease;
       will-change: transform, box-shadow;
-      transform-style: preserve-3d;
     }
-    #avatarCard:hover {
-      box-shadow: 14px 14px 0px 0px #000000;
+    #avatarCard:hover, .project-card:hover, .skill-group-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 32px -8px rgba(0, 0, 0, 0.08);
+      border-color: #d1d5db !important;
     }
     #avatarCard:active {
-      transform: translate(4px, 4px) scale(0.985) !important;
-      box-shadow: 4px 4px 0px 0px #000000 !important;
+      transform: translateY(-1px) scale(0.99) !important;
     }
 
-    /* Comic Stamp Pulse & Wiggle on Card Hover */
-    @keyframes stampWiggle {
-      0%, 100% { transform: scale(1) rotate(0deg); }
-      25% { transform: scale(1.08) rotate(-4deg); }
-      75% { transform: scale(1.08) rotate(4deg); }
-    }
-    #avatarCard:hover .stamp-badge {
-      animation: stampWiggle 0.8s ease-in-out infinite;
-    }
-
-    /* Comic Card Photo Zoom on Hover */
-    #avatarCard:hover #profilePhotoImg {
-      transform: scale(1.06);
-    }
-
-    /* Comic Status Dot Blink */
+    /* Status dot pulse */
     @keyframes statusDotPulse {
       0%, 100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.25; transform: scale(0.8); }
+      50% { opacity: 0.35; transform: scale(0.85); }
     }
     .status-dot-pulse {
-      animation: statusDotPulse 1.8s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+      animation: statusDotPulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
     }
 
     /* Scroll Progress Bar */
@@ -217,60 +175,46 @@
       transition: transform 0.08s linear;
     }
 
-    /* Reveal-on-scroll animation classes */
+    /* Smooth Scroll Reveals */
     .scroll-reveal {
       opacity: 0;
-      transform: translateY(36px);
-      transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+      transform: translateY(24px);
+      transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
       will-change: opacity, transform;
     }
     .scroll-reveal.revealed {
       opacity: 1;
       transform: translateY(0);
     }
-
     .scroll-reveal-left {
       opacity: 0;
-      transform: translateX(-48px);
-      transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+      transform: translateX(-32px);
+      transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
       will-change: opacity, transform;
     }
     .scroll-reveal-left.revealed {
       opacity: 1;
       transform: translateX(0);
     }
-
     .scroll-reveal-right {
       opacity: 0;
-      transform: translateX(48px);
-      transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+      transform: translateX(32px);
+      transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
       will-change: opacity, transform;
     }
     .scroll-reveal-right.revealed {
       opacity: 1;
       transform: translateX(0);
     }
-
-    .scroll-reveal-scale {
+    .scroll-reveal-scale, .scroll-reveal-comic {
       opacity: 0;
-      transform: scale(0.9) translateY(28px);
-      transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+      transform: translateY(20px);
+      transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
       will-change: opacity, transform;
     }
-    .scroll-reveal-scale.revealed {
+    .scroll-reveal-scale.revealed, .scroll-reveal-comic.revealed {
       opacity: 1;
-      transform: scale(1) translateY(0);
-    }
-
-    .scroll-reveal-comic {
-      opacity: 0;
-      transform: translateY(40px) rotate(-2deg);
-      transition: opacity 0.75s cubic-bezier(0.2, 0.9, 0.3, 1.2), transform 0.75s cubic-bezier(0.2, 0.9, 0.3, 1.2);
-      will-change: opacity, transform;
-    }
-    .scroll-reveal-comic.revealed {
-      opacity: 1;
-      transform: translateY(0) rotate(0deg);
+      transform: translateY(0);
     }
 
     /* Stagger Delays */
@@ -285,29 +229,75 @@
     .delay-450 { transition-delay: 450ms; }
     .delay-500 { transition-delay: 500ms; }
 
-    /* Floating Scroll-to-Top Button */
-    #floatingTopBtn {
+    /* Post-Loading Hero Entrance Animation */
+    .hero-entrance-fade {
       opacity: 0;
-      pointer-events: none;
-      transform: translateY(24px) scale(0.85);
-      transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1), transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    #floatingTopBtn.visible {
-      opacity: 1;
-      pointer-events: auto;
-      transform: translateY(0) scale(1);
+      transform: translateY(30px);
+      filter: blur(4px);
+      transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), 
+                  transform 0.85s cubic-bezier(0.16, 1, 0.3, 1), 
+                  filter 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform, filter;
     }
 
-    /* Smooth scroll offset compensation for sticky header */
+    /* Dedicated prominent entrance animation for Hero Title H1 */
+    .hero-title-entrance {
+      opacity: 0;
+      transform: translateY(38px) scale(0.97);
+      filter: blur(8px);
+      transition: opacity 0.95s cubic-bezier(0.16, 1, 0.3, 1), 
+                  transform 0.95s cubic-bezier(0.16, 1, 0.3, 1), 
+                  filter 0.95s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform, filter;
+    }
+
+    body.page-loaded .hero-entrance-fade {
+      opacity: 1;
+      transform: translateY(0);
+      filter: blur(0);
+    }
+
+    body.page-loaded .hero-title-entrance {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+      filter: blur(0);
+    }
+
+    /* Continuous Seamless Swaying (Bergoyang Tanpa Jeda) for Avatar Card */
+    @keyframes avatarCardSway {
+      0% {
+        transform: rotate(-2.2deg) translate3d(-3px, -2px, 0);
+      }
+      50% {
+        transform: rotate(2.2deg) translate3d(3px, -2px, 0);
+      }
+      100% {
+        transform: rotate(-2.2deg) translate3d(-3px, -2px, 0);
+      }
+    }
+
+    #avatarCard {
+      transform-origin: 50% 12%;
+      animation: avatarCardSway 3s ease-in-out infinite;
+    }
+
+    .hero-delay-badge { transition-delay: 150ms; }
+    .hero-delay-title { transition-delay: 380ms; }
+    .hero-delay-desc { transition-delay: 520ms; }
+    .hero-delay-cta { transition-delay: 660ms; }
+    .hero-delay-card { transition-delay: 480ms; }
+
     html {
       scroll-padding-top: 5.5rem;
     }
 
     @media (prefers-reduced-motion: reduce) {
-      .scroll-reveal, .scroll-reveal-left, .scroll-reveal-right, .scroll-reveal-scale, .scroll-reveal-comic {
+      .scroll-reveal, .scroll-reveal-left, .scroll-reveal-right, .scroll-reveal-scale, .scroll-reveal-comic, .hero-entrance-fade, .hero-title-entrance, #avatarCard {
         opacity: 1 !important;
         transform: none !important;
+        filter: none !important;
         transition: none !important;
+        animation: none !important;
       }
       #scrollProgressBar {
         display: none !important;
@@ -316,137 +306,131 @@
 
     /* Accessible focus rings */
     a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible {
-      outline: 4px solid #000000;
+      outline: 2px solid #000000;
       outline-offset: 2px;
     }
 
     /* ========================================== */
-    /* COMIC NEO-BRUTALIST DARK MODE (MANGA NOIR) */
+    /* CLEAN MODERN DARK MODE                     */
     /* ========================================== */
     html.dark {
       color-scheme: dark;
     }
     html.dark body {
-      background-color: #0c0c0e !important;
-      color: #ffffff !important;
+      background-color: #09090b !important;
+      color: #f4f4f5 !important;
     }
-    
+    header {
+      background-color: rgba(255, 255, 255, 0.8) !important;
+      backdrop-filter: blur(12px) !important;
+      -webkit-backdrop-filter: blur(12px) !important;
+      border-bottom-width: 1px !important;
+      border-bottom-color: rgba(229, 231, 235, 0.8) !important;
+    }
+    header > div:first-child {
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
     html.dark header {
-      background-color: #141417 !important;
-      border-color: #ffffff !important;
+      background-color: rgba(9, 9, 11, 0.8) !important;
+      backdrop-filter: blur(12px) !important;
+      -webkit-backdrop-filter: blur(12px) !important;
+      border-bottom-color: #27272a !important;
     }
     html.dark #mobileMenu {
-      background-color: #18181c !important;
-      border-color: #ffffff !important;
-      box-shadow: 6px 6px 0px 0px #ffffff !important;
+      background-color: #121215 !important;
+      border-color: #27272a !important;
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5) !important;
     }
-    
     html.dark #scrollProgressBar {
-      background-color: #ffffff !important;
+      background-color: #f4f4f5 !important;
     }
-
     html.dark section {
-      background-color: #0c0c0e !important;
-      border-color: #ffffff !important;
+      background-color: #09090b !important;
+      border-color: #27272a !important;
     }
     html.dark section.bg-neutral-50,
     html.dark section.bg-white {
-      background-color: #0c0c0e !important;
+      background-color: #09090b !important;
     }
     html.dark section#projects,
     html.dark section#education,
     html.dark section#contact {
-      background-color: #121215 !important;
+      background-color: #0e0e11 !important;
     }
-
     html.dark footer {
       background-color: #050507 !important;
-      border-color: #ffffff !important;
+      border-color: #27272a !important;
     }
 
     /* Invert cards, containers, panels */
     html.dark .bg-white {
-      background-color: #18181c !important;
-      color: #ffffff !important;
+      background-color: #121215 !important;
+      color: #f4f4f5 !important;
     }
     html.dark .bg-neutral-50 {
-      background-color: #202025 !important;
-      color: #ffffff !important;
+      background-color: #16161a !important;
+      color: #f4f4f5 !important;
     }
     html.dark .bg-neutral-100 {
-      background-color: #2a2a30 !important;
-      color: #ffffff !important;
+      background-color: #1f1f23 !important;
+      color: #f4f4f5 !important;
     }
 
-    /* Invert borders */
+    /* Modern dark borders */
     html.dark .border-black {
-      border-color: #ffffff !important;
+      border-color: #27272a !important;
     }
     html.dark .border-black\/10,
+    html.dark .border-black\/15,
     html.dark .border-black\/20 {
-      border-color: rgba(255, 255, 255, 0.25) !important;
+      border-color: rgba(255, 255, 255, 0.08) !important;
     }
     html.dark .border-black\/40 {
-      border-color: rgba(255, 255, 255, 0.45) !important;
+      border-color: rgba(255, 255, 255, 0.16) !important;
     }
 
     /* Invert typography */
     html.dark .text-black {
-      color: #ffffff !important;
+      color: #f4f4f5 !important;
     }
     html.dark .text-black\/90,
     html.dark .text-black\/80,
     html.dark .text-black\/70 {
-      color: #d4d4d8 !important;
-    }
-    html.dark .text-black\/60 {
       color: #a1a1aa !important;
     }
-    html.dark .text-black\/40 {
+    html.dark .text-black\/60 {
       color: #71717a !important;
     }
+    html.dark .text-black\/40 {
+      color: #52525b !important;
+    }
 
-    /* Brutalist Drop Shadows in Dark Mode (Pure White Hard Shadows) */
-    html.dark .shadow-brutal-sm {
-      box-shadow: 2px 2px 0px 0px #ffffff !important;
-    }
-    html.dark .shadow-brutal {
-      box-shadow: 4px 4px 0px 0px #ffffff !important;
-    }
-    html.dark .shadow-brutal-md {
-      box-shadow: 6px 6px 0px 0px #ffffff !important;
-    }
-    html.dark .shadow-brutal-lg {
-      box-shadow: 8px 8px 0px 0px #ffffff !important;
-    }
+    /* Soft diffuse shadows in Dark Mode */
+    html.dark .shadow-brutal-sm,
+    html.dark .shadow-brutal,
+    html.dark .shadow-brutal-md,
+    html.dark .shadow-brutal-lg,
     html.dark .shadow-brutal-xl {
-      box-shadow: 10px 10px 0px 0px #ffffff !important;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.6) !important;
     }
-    html.dark .shadow-brutal-white {
-      box-shadow: 4px 4px 0px 0px #ffffff !important;
-    }
-
-    html.dark #avatarCard:hover {
-      box-shadow: 14px 14px 0px 0px #ffffff !important;
-    }
-    html.dark #avatarCard:active {
-      box-shadow: 4px 4px 0px 0px #ffffff !important;
-    }
+    html.dark #avatarCard:hover,
     html.dark .project-card:hover,
     html.dark .skill-group-card:hover {
-      box-shadow: 8px 8px 0px 0px #ffffff !important;
+      box-shadow: 0 20px 35px -8px rgba(0, 0, 0, 0.8) !important;
+      border-color: #3f3f46 !important;
     }
 
-    /* Primary Buttons in Dark Mode */
+    /* Buttons in Dark Mode */
     html.dark a.bg-black,
     html.dark button.bg-black:not(#themeToggleBtn):not(#soundToggleBtn) {
-      background-color: #ffffff !important;
-      color: #000000 !important;
-      border-color: #ffffff !important;
+      background-color: #f4f4f5 !important;
+      color: #09090b !important;
+      border-color: #f4f4f5 !important;
     }
     html.dark a.bg-black:hover,
     html.dark button.bg-black:hover:not(#themeToggleBtn):not(#soundToggleBtn) {
-      background-color: #e4e4e7 !important;
+      background-color: #ffffff !important;
       color: #000000 !important;
     }
 
@@ -454,79 +438,28 @@
     html.dark input,
     html.dark textarea,
     html.dark select {
-      background-color: #242429 !important;
-      color: #ffffff !important;
-      border-color: #ffffff !important;
+      background-color: #16161a !important;
+      color: #f4f4f5 !important;
+      border-color: #27272a !important;
     }
     html.dark input::placeholder,
     html.dark textarea::placeholder {
-      color: #a1a1aa !important;
-    }
-    html.dark select option {
-      background-color: #242429 !important;
-      color: #ffffff !important;
+      color: #71717a !important;
     }
 
     /* Halftone Textures in Dark Mode */
-    html.dark .halftone-bg {
-      background-image: radial-gradient(#ffffff 1.5px, transparent 1.5px) !important;
-    }
-    html.dark .halftone-subtle {
-      background-image: radial-gradient(rgba(255, 255, 255, 0.25) 1px, transparent 1px) !important;
-    }
-    html.dark .grid-lines-bg {
-      background-image: linear-gradient(to right, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
-                        linear-gradient(to bottom, rgba(255, 255, 255, 0.08) 1px, transparent 1px) !important;
-    }
-
-    /* Vector SVG Artworks in Dark Mode */
-    html.dark svg rect[stroke="#000000"],
-    html.dark svg line[stroke="#000000"],
-    html.dark svg path[stroke="#000000"],
-    html.dark svg circle[stroke="#000000"] {
-      stroke: #ffffff !important;
-    }
-    html.dark svg rect[fill="#000000"],
-    html.dark svg circle[fill="#000000"],
-    html.dark svg polygon[fill="#000000"] {
-      fill: #ffffff !important;
-    }
-    html.dark svg rect[fill="#ffffff"] {
-      fill: #1f1f25 !important;
-    }
-    html.dark svg rect[fill="#f5f5f5"],
-    html.dark svg rect[fill="#f0f0f0"] {
-      fill: #2a2a32 !important;
-    }
-
-    /* Speech bubbles */
-    html.dark .bubble-tail-bottom::after {
-      border-top-color: #ffffff !important;
-    }
-    html.dark .bubble-tail-bottom::before {
-      border-top-color: #18181c !important;
+    html.dark .halftone-bg, html.dark .halftone-subtle {
+      background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px) !important;
     }
 
     /* Modals in Dark Mode */
     html.dark #projectModalCard,
     html.dark #resumeModalCard,
     html.dark #certModalCard {
-      background-color: #18181c !important;
-      color: #ffffff !important;
-      border-color: #ffffff !important;
-      box-shadow: 10px 10px 0px 0px #ffffff !important;
-    }
-
-    /* Floating Top Button in Dark Mode */
-    html.dark #floatingTopBtn {
-      background-color: #ffffff !important;
-      color: #000000 !important;
-      border-color: #ffffff !important;
-      box-shadow: 4px 4px 0px 0px rgba(255, 255, 255, 0.7) !important;
-    }
-    html.dark #floatingTopBtn:hover {
-      background-color: #e4e4e7 !important;
-      color: #000000 !important;
+      background-color: #121215 !important;
+      color: #f4f4f5 !important;
+      border-color: #27272a !important;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8) !important;
     }
 
     /* Focus rings in Dark Mode */
@@ -535,7 +468,51 @@
     html.dark input:focus-visible,
     html.dark textarea:focus-visible,
     html.dark select:focus-visible {
-      outline: 4px solid #ffffff !important;
+      outline: 2px solid #ffffff !important;
+    }
+
+    /* Simple Clean Preloader Slide-Up Curtain Animation */
+    #sitePreloader {
+      transform: translateY(0);
+      transition: transform 0.75s cubic-bezier(0.77, 0, 0.175, 1);
+      will-change: transform;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    }
+    #sitePreloader.preloader-hidden {
+      transform: translateY(-100%);
+      pointer-events: none;
+    }
+    #sitePreloader .preloader-content {
+      transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.35s ease;
+      will-change: transform, opacity;
+    }
+    #sitePreloader.preloader-hidden .preloader-content {
+      transform: translateY(-40px);
+      opacity: 0;
+    }
+
+    html.dark #sitePreloader {
+      background-color: #0c0c0e !important;
+      color: #f4f4f5 !important;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
+    }
+    html.dark #sitePreloader .border-neutral-200 {
+      border-color: #27272a !important;
+    }
+    html.dark #sitePreloader .border-t-neutral-900 {
+      border-top-color: #f4f4f5 !important;
+    }
+    html.dark #sitePreloader .text-neutral-800 {
+      color: #f4f4f5 !important;
+    }
+    html.dark #sitePreloader .bg-neutral-100 {
+      background-color: #27272a !important;
+    }
+    html.dark #sitePreloader .bg-neutral-900 {
+      background-color: #f4f4f5 !important;
+    }
+    html.dark #sitePreloader .text-neutral-500 {
+      color: #a1a1aa !important;
     }
   </style>
 </head>
@@ -543,81 +520,106 @@
 <body class="bg-white text-black font-sans antialiased selection:bg-black selection:text-white relative min-h-screen">
 
   <!-- ========================================== -->
+  <!-- PRELOADER: SIMPLE MINIMALIST LOADER        -->
+  <!-- ========================================== -->
+  <div id="sitePreloader" class="fixed inset-0 z-50 flex flex-col items-center justify-center bg-white select-none overflow-hidden" role="status" aria-live="polite" aria-label="Loading portfolio">
+    <div class="preloader-content flex flex-col items-center gap-4 text-center px-4">
+      <!-- Minimalist Spinner -->
+      <div class="w-10 h-10 border-3 border-neutral-200 border-t-neutral-900 rounded-full animate-spin" aria-hidden="true"></div>
+
+      <!-- Clean Minimal Text & Progress -->
+      <div class="flex flex-col items-center gap-1.5">
+        <p class="font-sans text-sm font-semibold tracking-wider text-neutral-800 uppercase">
+          Loading
+        </p>
+        <div class="w-44 h-1 bg-neutral-100 rounded-full overflow-hidden mt-1">
+          <div
+            id="preloaderProgressBar"
+            class="h-full bg-neutral-900 transition-all duration-100 ease-out"
+            style="width: 0%;"
+          ></div>
+        </div>
+        <span id="preloaderPercentage" class="font-mono text-xs text-neutral-500 mt-0.5">0%</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================== -->
   <!-- SECTION: HEADER & NAVIGATION               -->
   <!-- ========================================== -->
-  <header class="sticky top-0 z-40 bg-white border-b-4 border-black transition-all duration-200">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <header class="sticky top-0 z-40 bg-white/80 dark:bg-neutral-950/80 backdrop-blur-md border-b border-neutral-200/80 dark:border-neutral-800 transition-all duration-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 backdrop-blur-md">
       <div class="flex items-center justify-between h-20">
         
         <!-- Brand / Wordmark -->
         <a href="#hero" class="flex items-center gap-3 group focus:outline-none" aria-label="Alex Carter Home">
-          <div class="w-12 h-12 bg-black text-white flex items-center justify-center font-comic text-2xl tracking-wider border-2 border-black shadow-brutal-sm group-hover:bg-white group-hover:text-black group-hover:rotate-6 transition-all duration-150">
-            <img src="src/foto/logosmk.jpeg" alt="foto kamu" class="w-full h-full object-cover">
-          </div>
+          <!-- Standalone Custom Logo (Tanpa Komponen Kontainer) -->
+          <img
+            id="siteBrandLogo"
+            src="/foto/logosmk2.jpeg"
+            alt="Logo Brand"
+            class="w-10 h-10 object-contain select-none transition-transform duration-200 group-hover:scale-105 cursor-pointer"
+            title="Klik untuk ubah menggunakan logo buatan sendiri"
+          />
+          <input type="file" id="brandLogoUploadInput" accept="image/*" class="hidden" aria-label="Unggah logo buatan sendiri" />
           <div class="flex flex-col">
-            <span class="font-comic text-2xl sm:text-3xl tracking-wide leading-none group-hover:translate-x-0.5 transition-transform">
-              JULIAN KHASIIB R.
+            <span class="font-sans font-extrabold text-xl tracking-tight leading-tight text-neutral-900 dark:text-white">
+              JULIAN KHASIIB R
             </span>
-            <span class="font-mono text-xs font-bold uppercase tracking-widest text-black/70">
+            <span class="font-mono text-[11px] font-medium tracking-wider text-neutral-500 dark:text-neutral-400">
               MURID INFORMATIKA
             </span>
           </div>
         </a>
 
         <!-- Desktop Navigation Links -->
-        <nav class="hidden md:flex items-center gap-6 lg:gap-8 font-mono text-sm font-bold uppercase tracking-wider" aria-label="Primary Navigation">
-          <a href="#hero" class="nav-link py-1 hover:underline underline-offset-8 decoration-4 decoration-black transition-colors" data-section="hero">
+        <nav class="hidden md:flex items-center gap-6 lg:gap-8 font-sans text-sm font-semibold tracking-normal" aria-label="Primary Navigation">
+          <a href="#hero" class="nav-link py-1 text-neutral-600 hover:text-black dark:text-neutral-400 dark:hover:text-white transition-colors" data-section="hero">
             Home
           </a>
-          <a href="#projects" class="nav-link py-1 hover:underline underline-offset-8 decoration-4 decoration-black transition-colors" data-section="projects">
+          <a href="#projects" class="nav-link py-1 text-neutral-600 hover:text-black dark:text-neutral-400 dark:hover:text-white transition-colors" data-section="projects">
             Projects
           </a>
-          <a href="#skills" class="nav-link py-1 hover:underline underline-offset-8 decoration-4 decoration-black transition-colors" data-section="skills">
+          <a href="#skills" class="nav-link py-1 text-neutral-600 hover:text-black dark:text-neutral-400 dark:hover:text-white transition-colors" data-section="skills">
             Skills
           </a>
-          <a href="#education" class="nav-link py-1 hover:underline underline-offset-8 decoration-4 decoration-black transition-colors" data-section="education">
+          <a href="#education" class="nav-link py-1 text-neutral-600 hover:text-black dark:text-neutral-400 dark:hover:text-white transition-colors" data-section="education">
             Education
           </a>
-          <a href="#certificates" class="nav-link py-1 hover:underline underline-offset-8 decoration-4 decoration-black transition-colors" data-section="certificates">
-            Certificates
+          <a href="#certificates" class="nav-link py-1 text-neutral-600 hover:text-black dark:text-neutral-400 dark:hover:text-white transition-colors" data-section="certificates">
+            Certifications
           </a>
         </nav>
 
-        <!-- Right Header Actions (Theme Toggle + Audio FX Toggle + Primary CTA) -->
+        <!-- Right Header Actions -->
         <div class="hidden md:flex items-center gap-3">
-          <!-- Comic Theme Toggle Button (Light / Dark Mode) -->
-          <button id="themeToggleBtn" type="button" aria-label="Toggle dark / light mode" title="Ganti Mode Gelap / Terang" class="p-2.5 bg-white border-2 border-black shadow-brutal-sm hover:shadow-brutal hover:bg-neutral-100 active:translate-x-0.5 active:translate-y-0.5 active:shadow-none transition-all flex items-center justify-center cursor-pointer">
+          <!-- Theme Toggle Button (Light / Dark Mode) -->
+          <button id="themeToggleBtn" type="button" aria-label="Toggle dark / light mode" title="Ganti Mode Gelap / Terang" class="p-2.5 bg-neutral-100 hover:bg-neutral-200 dark:bg-neutral-800 dark:hover:bg-neutral-700 text-neutral-800 dark:text-neutral-200 rounded-xl border border-neutral-200 dark:border-neutral-700 shadow-sm transition-all flex items-center justify-center cursor-pointer">
             <span id="themeIcon" class="text-base select-none">🌙</span>
           </button>
 
-          <!-- Comic Sound FX Toggle -->
-          <button id="soundToggleBtn" type="button" aria-label="Toggle comic click sounds" title="Toggle comic sound effects" class="p-2.5 bg-white border-2 border-black shadow-brutal-sm hover:shadow-brutal hover:bg-neutral-100 active:translate-x-0.5 active:translate-y-0.5 active:shadow-none transition-all flex items-center justify-center cursor-pointer">
-            <span id="soundIcon" class="text-base select-none">🔊</span>
-          </button>
+          <!-- Hidden Sound Button (kept for script compatibility) -->
+          <button id="soundToggleBtn" type="button" class="hidden" aria-hidden="true"><span id="soundIcon">🔇</span></button>
 
           <!-- Contact CTA Button -->
-          <a href="#contact" class="px-5 py-2.5 bg-black text-white font-mono text-sm font-bold uppercase tracking-wider border-2 border-black shadow-brutal hover:bg-white hover:text-black hover:shadow-brutal-md active:translate-x-1 active:translate-y-1 active:shadow-none transition-all whitespace-nowrap">
-            Let's Talk 💬
+          <a href="#contact" class="px-5 py-2.5 bg-neutral-900 text-white dark:bg-white dark:text-neutral-900 font-sans text-sm font-semibold tracking-normal rounded-xl shadow-sm hover:shadow-md hover:-translate-y-0.5 active:translate-y-0 transition-all whitespace-nowrap">
+            Let's Connect →
           </a>
         </div>
 
         <!-- Mobile Header Controls -->
         <div class="flex items-center gap-2 md:hidden">
-          <!-- Mobile Theme Toggle -->
-          <button id="mobileThemeToggleBtn" type="button" aria-label="Toggle dark / light mode" title="Ganti Mode Gelap / Terang" class="p-2 bg-white border-2 border-black shadow-brutal-sm hover:bg-neutral-100 cursor-pointer">
+          <button id="mobileThemeToggleBtn" type="button" aria-label="Toggle dark / light mode" class="p-2 bg-neutral-100 dark:bg-neutral-800 text-neutral-800 dark:text-neutral-200 rounded-lg border border-neutral-200 dark:border-neutral-700">
             <span id="mobileThemeIcon" class="text-sm select-none">🌙</span>
           </button>
 
-          <!-- Mobile Sound Toggle -->
-          <button id="mobileSoundToggleBtn" type="button" aria-label="Toggle comic click sounds" class="p-2 bg-white border-2 border-black shadow-brutal-sm hover:bg-neutral-100 cursor-pointer">
-            <span id="mobileSoundIcon" class="text-sm select-none">🔊</span>
-          </button>
+          <button id="mobileSoundToggleBtn" type="button" class="hidden" aria-hidden="true"><span id="mobileSoundIcon">🔇</span></button>
           
-          <button id="menuToggleBtn" type="button" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open main menu" class="p-2.5 bg-white border-2 border-black shadow-brutal-sm active:translate-x-0.5 active:translate-y-0.5 focus:outline-none cursor-pointer">
-            <div class="w-6 h-5 flex flex-col justify-between items-center relative">
-              <span id="bar1" class="w-full h-1 bg-black rounded-none transition-all duration-300 origin-center"></span>
-              <span id="bar2" class="w-full h-1 bg-black rounded-none transition-all duration-300"></span>
-              <span id="bar3" class="w-full h-1 bg-black rounded-none transition-all duration-300 origin-center"></span>
+          <button id="menuToggleBtn" type="button" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open main menu" class="p-2.5 bg-neutral-100 dark:bg-neutral-800 rounded-lg border border-neutral-200 dark:border-neutral-700 focus:outline-none cursor-pointer">
+            <div class="w-5 h-4 flex flex-col justify-between items-center relative">
+              <span id="bar1" class="w-full h-0.5 bg-neutral-800 dark:bg-neutral-200 rounded-full transition-all duration-300 origin-center"></span>
+              <span id="bar2" class="w-full h-0.5 bg-neutral-800 dark:bg-neutral-200 rounded-full transition-all duration-300"></span>
+              <span id="bar3" class="w-full h-0.5 bg-neutral-800 dark:bg-neutral-200 rounded-full transition-all duration-300 origin-center"></span>
             </div>
           </button>
         </div>
@@ -626,32 +628,32 @@
     </div>
 
     <!-- Mobile Drawer Menu -->
-    <div id="mobileMenu" class="hidden md:hidden bg-white border-t-4 border-black px-4 pt-4 pb-6 shadow-brutal-lg transition-all duration-300" aria-label="Mobile Navigation">
-      <nav class="flex flex-col space-y-3 font-mono font-bold text-base uppercase">
-        <a href="#hero" class="mobile-nav-link p-3 border-2 border-black bg-white shadow-brutal-sm hover:bg-black hover:text-white transition-colors">
-          01. Home / Hero
+    <div id="mobileMenu" class="hidden md:hidden bg-white dark:bg-neutral-900 border-t border-neutral-200 dark:border-neutral-800 px-4 pt-4 pb-6 shadow-xl transition-all duration-300" aria-label="Mobile Navigation">
+      <nav class="flex flex-col space-y-2 font-sans font-medium text-sm">
+        <a href="#hero" class="mobile-nav-link p-3 rounded-xl border border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-800/60 hover:bg-neutral-900 hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors">
+          Home
         </a>
-        <a href="#projects" class="mobile-nav-link p-3 border-2 border-black bg-white shadow-brutal-sm hover:bg-black hover:text-white transition-colors">
-          02. Featured Projects
+        <a href="#projects" class="mobile-nav-link p-3 rounded-xl border border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-800/60 hover:bg-neutral-900 hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors">
+          Featured Projects
         </a>
-        <a href="#skills" class="mobile-nav-link p-3 border-2 border-black bg-white shadow-brutal-sm hover:bg-black hover:text-white transition-colors">
-          03. Superpower Skills
+        <a href="#skills" class="mobile-nav-link p-3 rounded-xl border border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-800/60 hover:bg-neutral-900 hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors">
+          Skills &amp; Technologies
         </a>
-        <a href="#education" class="mobile-nav-link p-3 border-2 border-black bg-white shadow-brutal-sm hover:bg-black hover:text-white transition-colors">
-          04. Education & Origin
+        <a href="#education" class="mobile-nav-link p-3 rounded-xl border border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-800/60 hover:bg-neutral-900 hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors">
+          Education &amp; Background
         </a>
-        <a href="#certificates" class="mobile-nav-link p-3 border-2 border-black bg-white shadow-brutal-sm hover:bg-black hover:text-white transition-colors">
-          05. Certifications
+        <a href="#certificates" class="mobile-nav-link p-3 rounded-xl border border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-800/60 hover:bg-neutral-900 hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors">
+          Certifications
         </a>
-        <a href="#contact" class="mobile-nav-link p-3 border-2 border-black bg-black text-white shadow-brutal-sm hover:bg-white hover:text-black transition-colors text-center">
-          06. Contact Me ✉
+        <a href="#contact" class="mobile-nav-link p-3 rounded-xl bg-neutral-900 text-white dark:bg-white dark:text-neutral-900 transition-colors text-center font-semibold">
+          Contact Me →
         </a>
       </nav>
 
-      <!-- Mobile Theme & Audio Quick Switch Row -->
-      <div class="pt-4 mt-4 border-t-2 border-black flex items-center justify-between font-mono text-xs font-bold">
-        <span class="text-black/70">TEMA TAMPILAN:</span>
-        <button id="mobileMenuThemeBtn" type="button" class="px-3 py-1.5 bg-neutral-100 border-2 border-black shadow-brutal-sm flex items-center gap-1.5 active:translate-x-0.5 active:translate-y-0.5 transition-all cursor-pointer">
+      <!-- Mobile Theme Quick Switch Row -->
+      <div class="pt-4 mt-4 border-t border-neutral-200 dark:border-neutral-800 flex items-center justify-between font-mono text-xs font-semibold">
+        <span class="text-neutral-500 dark:text-neutral-400">THEME:</span>
+        <button id="mobileMenuThemeBtn" type="button" class="px-3 py-1.5 bg-neutral-100 dark:bg-neutral-800 rounded-lg border border-neutral-200 dark:border-neutral-700 flex items-center gap-1.5 active:translate-y-0.5 transition-all cursor-pointer">
           <span id="mobileMenuThemeIcon">🌙</span>
           <span id="mobileMenuThemeText">Dark Mode</span>
         </button>
@@ -659,8 +661,8 @@
     </div>
 
     <!-- Scroll Progress Indicator Bar -->
-    <div class="w-full bg-neutral-200 h-1.5 border-t-2 border-black overflow-hidden relative" aria-hidden="true">
-      <div id="scrollProgressBar" class="h-full bg-black w-full origin-left scale-x-0"></div>
+    <div class="w-full bg-neutral-200/50 dark:bg-neutral-800 h-1 overflow-hidden relative" aria-hidden="true">
+      <div id="scrollProgressBar" class="h-full bg-neutral-900 dark:bg-white w-full origin-left scale-x-0"></div>
     </div>
   </header>
 
@@ -668,120 +670,114 @@
     <!-- ========================================== -->
     <!-- SECTION: HERO SECTION                      -->
     <!-- ========================================== -->
-    <section id="hero" class="relative pt-12 pb-16 md:pt-20 md:pb-24 border-b-4 border-black overflow-hidden bg-white">
-      <!-- Halftone pattern backdrop in corner -->
-      <div class="absolute right-0 top-0 w-72 h-72 halftone-subtle opacity-60 pointer-events-none hidden lg:block" aria-hidden="true"></div>
-      <div class="absolute left-0 bottom-0 w-60 h-60 grid-lines-bg opacity-40 pointer-events-none hidden lg:block" aria-hidden="true"></div>
+    <section id="hero" class="relative pt-12 pb-16 md:pt-20 md:pb-24 border-b border-neutral-200 dark:border-neutral-800 overflow-hidden bg-white dark:bg-[#09090b]">
+      <!-- Subtle dot grid pattern backdrop -->
+      <div class="absolute right-0 top-0 w-80 h-80 halftone-subtle opacity-40 pointer-events-none hidden lg:block" aria-hidden="true"></div>
+      <div class="absolute left-0 bottom-0 w-64 h-64 grid-lines-bg opacity-30 pointer-events-none hidden lg:block" aria-hidden="true"></div>
 
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        <!-- Comic Issue Strip -->
-        <div class="inline-flex items-center gap-2 px-3 py-1 bg-black text-white font-mono text-xs font-bold uppercase tracking-widest border-2 border-black shadow-brutal-sm mb-0">
-          <span>★ SMK NEGERI 3 JEPARA</span>
-          <span aria-hidden="true">·</span>
-          <span>MURID INFORMATIKA</span>
-          <span aria-hidden="true">·</span>
-          <span class="hidden sm:inline">TKJ</span>
+        <!-- Status Badge -->
+        <div class="hero-entrance-fade hero-delay-badge inline-flex items-center gap-2 px-3.5 py-1.5 bg-neutral-100 dark:bg-neutral-800 text-neutral-800 dark:text-neutral-200 font-mono text-xs font-semibold uppercase tracking-wider rounded-full border border-neutral-200 dark:border-neutral-700 mb-6 shadow-sm">
+          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+          <span>SMK NEGERI 3 JEPARA</span>
+          <span aria-hidden="true" class="text-neutral-400">·</span>
+          <span class="text-neutral-500 dark:text-neutral-400">STUDENTS TKJ</span>
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           
-          <!-- Hero Left Column: Comic Typography & CTAs -->
+          <!-- Hero Left Column: Clean Typography & CTAs -->
           <div class="lg:col-span-7 flex flex-col items-start">
             
-            <!-- Big Comic Title -->
-            <h1 class="font-comic text-5xl sm:text-6xl md:text-7xl lg:text-8xl tracking-wide uppercase leading-none text-black mt-0 mb-4">
-              HEY THERE! <br />
-              <span class="inline-block bg-white px-2 border-4 border-black shadow-brutal-md -rotate-1 hover:rotate-0 transition-transform">
-                JULIAN RADITYA
-              </span>
+            <!-- Hero Title -->
+            <h1 class="hero-title-entrance hero-delay-title font-sans font-extrabold text-4xl sm:text-5xl md:text-6xl lg:text-7xl tracking-tight text-neutral-900 dark:text-white leading-[1.1] mb-6">
+              Hi, I'm <span class="bg-neutral-900 text-white dark:bg-white dark:text-neutral-900 px-3 py-0.5 rounded-xl inline-block shadow-sm">JULIAN RADITYA</span>
             </h1>
 
             <!-- Subtitle -->
-            <p class="text-lg sm:text-xl font-medium text-black/90 max-w-2xl leading-relaxed mb-8">
-              Seorang siswa TKJ yang ingin menjadi designer. Pelajar yang ingin mempelajari hingga paham dan mem-praktek kannya semaksimal mungkin.
-              Pendekatan saya memadukan prinsip desain yang berpusat pada pengguna dengan kepekaan estetika yang kuat.
-              Seperti TKJ pada umumnya, saya juga mempelajari hal-hal seperti konfigurasi jaringan, perkabelan, dan sebagainya. Dalam sisi bahasa pemrograman saya mempelajari bahasa seperti <strong>HTML, CSS, JS &amp; PYTHON</strong> dengan kemampuan yang sudah terbentuk landasannya.
+            <p class="hero-entrance-fade hero-delay-desc text-lg sm:text-xl font-normal text-neutral-600 dark:text-neutral-300 max-w-2xl leading-relaxed mb-8">
+              An informatics student who aspires to create <b>Modern</b> projects, become a <b>Web Developer</b>, as well a prepared to enter the <b>Professional</b> workforce and <b>Drive meaningful change for the future</b>
             </p>
 
             <!-- Call-To-Action Buttons -->
-            <div class="flex flex-wrap items-center gap-4 w-full sm:w-auto">
+            <div class="hero-entrance-fade hero-delay-cta flex flex-wrap items-center gap-4 w-full sm:w-auto">
               <!-- Primary CTA -->
-              <a href="#projects" class="w-full sm:w-auto text-center px-7 py-3.5 bg-black text-white font-mono text-sm font-extrabold uppercase tracking-wider border-3 border-black shadow-brutal-md hover:shadow-brutal-lg hover:-translate-y-0.5 active:translate-x-1 active:translate-y-1 active:shadow-none transition-all">
-                View Projects ↓
+              <a href="#projects" class="w-full sm:w-auto text-center px-7 py-3.5 bg-neutral-900 text-white dark:bg-white dark:text-neutral-900 font-sans text-sm font-semibold tracking-normal rounded-xl shadow-sm hover:shadow-md hover:-translate-y-0.5 active:translate-y-0 transition-all">
+                Explore Projects ↓
               </a>
 
               <!-- Secondary CTA -->
-              <a href="#contact" class="w-full sm:w-auto text-center px-7 py-3.5 bg-white text-black font-mono text-sm font-extrabold uppercase tracking-wider border-3 border-black shadow-brutal-md hover:bg-black hover:text-white hover:shadow-brutal-lg hover:-translate-y-0.5 active:translate-x-1 active:translate-y-1 active:shadow-none transition-all">
-                Contact Me ✉
+              <a href="#contact" class="w-full sm:w-auto text-center px-7 py-3.5 bg-white text-neutral-900 dark:bg-neutral-900 dark:text-white font-sans text-sm font-semibold tracking-normal rounded-xl border border-neutral-300 dark:border-neutral-700 shadow-sm hover:bg-neutral-50 dark:hover:bg-neutral-800 hover:-translate-y-0.5 active:translate-y-0 transition-all">
+                Contact Me →
               </a>
             </div>
 
           </div>
 
-          <!-- Hero Right Column: Interactive Comic Photo Card -->
+          <!-- Hero Right Column: Interactive Profile Card -->
           <div class="lg:col-span-5 flex justify-center">
-            <div id="avatarCard" class="relative w-full max-w-md bg-white border-4 border-black shadow-brutal-xl p-5 sm:p-7 group transition-all duration-200 select-none animate-comic-float cursor-pointer">
+            <div id="avatarCard" class="hero-entrance-fade hero-delay-card relative w-full max-w-md bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 shadow-md rounded-2xl p-6 group transition-all duration-300 select-none cursor-pointer hover:shadow-xl hover:-translate-y-1">
               
-              <!-- Top Comic Header Strip on Card -->
-              <div class="flex items-center justify-between pb-3 mb-3 border-b-2 border-black font-mono text-xs font-bold">
-                <span class="flex items-center gap-1.5">
-                  <span class="w-2.5 h-2.5 bg-black rounded-full inline-block status-dot-pulse"></span>
-                  <span>SMK NEGERI 3 JEPARA</span>
+              <!-- Top Header Strip on Card -->
+              <div class="flex items-center justify-between pb-3 mb-4 border-b border-neutral-100 dark:border-neutral-800 font-mono text-xs">
+                <span class="flex items-center gap-2 font-medium text-neutral-700 dark:text-neutral-300">
+                  <span class="w-2.5 h-2.5 bg-emerald-500 rounded-full inline-block status-dot-pulse"></span>
+                  <span>Active &amp; Ready to Deploy</span>
                 </span>
-                <span class="text-[10px] uppercase font-bold text-black/60 tracking-wider">
-                  Online
+                <span class="text-[11px] font-semibold text-neutral-400 dark:text-neutral-500 tracking-wide uppercase">
+                  Profile Overview
                 </span>
               </div>
 
-              <!-- Photo Container (Polaroid / Comic Frame with photo) -->
-              <div class="relative w-full aspect-square border-3 border-black bg-neutral-100 overflow-hidden group/photo shadow-inner">
+              <!-- Photo Container -->
+              <div class="relative w-full aspect-square rounded-xl overflow-hidden group/photo bg-neutral-100 dark:bg-neutral-800 border border-neutral-200/80 dark:border-neutral-700/80">
                 
-                <!-- Actual Profile Photo Image -->
+                <!-- Profile Photo Image -->
                 <img
                   id="profilePhotoImg"
-                  src="src/foto/fotoiyan.jpeg"
+                  src="/foto/fotoiyan.jpeg"
                   alt="Foto Profil Developer"
-                  class="w-full h-full object-cover object-center transition-all duration-500 ease-out"
+                  class="w-full h-full object-cover object-center transition-all duration-500 ease-out group-hover/photo:scale-105"
                   referrerPolicy="no-referrer"
                 />
 
-                <!-- Halftone Overlay (Comic Screentone effect) -->
-                <div id="photoHalftoneOverlay" class="absolute inset-0 halftone-subtle opacity-30 pointer-events-none mix-blend-multiply transition-opacity"></div>
+                <div id="photoHalftoneOverlay" class="hidden"></div>
 
-                <!-- Verified Stamp Badge -->
-                <div class="stamp-badge absolute bottom-3 right-3 bg-black text-white px-2.5 py-1 border-2 border-white shadow-brutal-sm font-mono text-xs font-extrabold z-10 flex items-center gap-1 transition-transform">
-                  <span>✓</span> <span>VERIFIED DEV</span>
+                <!-- Verified Badge -->
+                <div class="stamp-badge absolute bottom-3 right-3 bg-neutral-900/90 dark:bg-white/90 backdrop-blur-sm text-white dark:text-neutral-900 px-3 py-1 rounded-full border border-neutral-700/30 dark:border-neutral-200 text-xs font-semibold z-10 flex items-center gap-1.5 shadow-sm">
+                  <span class="text-emerald-400 dark:text-emerald-600 font-bold">✓</span>
+                  <span>Verified Engineer</span>
                 </div>
 
               </div>
 
-              <!-- Interactive Card Controls Strip -->
-              <div class="mt-4 pt-3 border-t-2 border-black flex flex-col gap-3">
+              <!-- Card Bio & Socials Strip -->
+              <div class="mt-4 pt-3 border-t border-neutral-100 dark:border-neutral-800 flex flex-col gap-3">
                 
                 <div class="flex items-center justify-between">
                   <div>
-                    <h2 class="font-comic text-2xl tracking-wide leading-none">Yan Yeager</h2>
-                    <p class="font-mono text-xs text-black/70 mt-0.5">WEB DEV &amp; CREATOR</p>
+                    <h2 class="font-sans font-bold text-xl text-neutral-900 dark:text-white tracking-tight">Yan Raditya</h2>
+                    <p class="font-mono text-xs text-neutral-500 dark:text-neutral-400 mt-0.5">Full-Stack Engineer</p>
                   </div>
                 </div>
 
-                <!-- Social Media Links Strip: GitHub, Instagram, LinkedIn -->
-                <div class="p-2 bg-neutral-50 border-2 border-black flex items-center justify-between gap-1.5 font-mono text-xs">
-                  <span class="text-[10px] font-extrabold uppercase tracking-wider text-black/60 pl-1 hidden sm:inline">
-                    LINKS:
+                <!-- Social Media Links -->
+                <div class="p-2.5 bg-neutral-50 dark:bg-neutral-800/50 rounded-xl border border-neutral-200/70 dark:border-neutral-700/70 flex items-center justify-between gap-1.5 text-xs">
+                  <span class="text-[11px] font-medium text-neutral-500 dark:text-neutral-400 pl-1 hidden sm:inline">
+                    Connect:
                   </span>
                   <div class="flex items-center justify-around sm:justify-end gap-2 w-full sm:w-auto">
                     <!-- GitHub Link -->
                     <a
-                      href="https://github.com/iyanyeager"
+                      href="https://github.com/yanyeager"
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label="GitHub Profile"
                       title="Buka GitHub"
-                      class="flex items-center gap-1.5 px-2.5 py-1.5 bg-white text-black hover:bg-black hover:text-white border-2 border-black shadow-brutal-sm hover:shadow-brutal active:translate-x-0.5 active:translate-y-0.5 transition-all text-xs font-bold uppercase group/link"
+                      class="flex items-center gap-1.5 px-3 py-1.5 bg-white dark:bg-neutral-800 text-neutral-800 dark:text-neutral-200 hover:text-black dark:hover:text-white rounded-lg border border-neutral-200 dark:border-neutral-700 shadow-sm hover:shadow transition-all text-xs font-medium"
                     >
-                      <svg class="w-3.5 h-3.5 fill-current group-hover/link:rotate-6 transition-transform" viewBox="0 0 24 24" aria-hidden="true">
+                      <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24" aria-hidden="true">
                         <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
                       </svg>
                       <span>GitHub</span>
@@ -794,9 +790,9 @@
                       rel="noopener noreferrer"
                       aria-label="Instagram Profile"
                       title="Buka Instagram"
-                      class="flex items-center gap-1.5 px-2.5 py-1.5 bg-white text-black hover:bg-black hover:text-white border-2 border-black shadow-brutal-sm hover:shadow-brutal active:translate-x-0.5 active:translate-y-0.5 transition-all text-xs font-bold uppercase group/link"
+                      class="flex items-center gap-1.5 px-3 py-1.5 bg-white dark:bg-neutral-800 text-neutral-800 dark:text-neutral-200 hover:text-black dark:hover:text-white rounded-lg border border-neutral-200 dark:border-neutral-700 shadow-sm hover:shadow transition-all text-xs font-medium"
                     >
-                      <svg class="w-3.5 h-3.5 fill-current group-hover/link:rotate-6 transition-transform" viewBox="0 0 24 24" aria-hidden="true">
+                      <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24" aria-hidden="true">
                         <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
                       </svg>
                       <span>Instagram</span>
@@ -804,14 +800,14 @@
 
                     <!-- LinkedIn Link -->
                     <a
-                      href="https://linkedin.com"
+                      href="https://www.linkedin.com/in/yanz-serfort-b83946444?utm_source=share_via&utm_content=profile&utm_medium=member_android"
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label="LinkedIn Profile"
                       title="Buka LinkedIn"
-                      class="flex items-center gap-1.5 px-2.5 py-1.5 bg-white text-black hover:bg-black hover:text-white border-2 border-black shadow-brutal-sm hover:shadow-brutal active:translate-x-0.5 active:translate-y-0.5 transition-all text-xs font-bold uppercase group/link"
+                      class="flex items-center gap-1.5 px-3 py-1.5 bg-white dark:bg-neutral-800 text-neutral-800 dark:text-neutral-200 hover:text-black dark:hover:text-white rounded-lg border border-neutral-200 dark:border-neutral-700 shadow-sm hover:shadow transition-all text-xs font-medium"
                     >
-                      <svg class="w-3.5 h-3.5 fill-current group-hover/link:rotate-6 transition-transform" viewBox="0 0 24 24" aria-hidden="true">
+                      <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24" aria-hidden="true">
                         <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
                       </svg>
                       <span>LinkedIn</span>
@@ -826,15 +822,15 @@
 
         </div>
 
-        <!-- Metric Proof Strip (Adjacency Rule) -->
-        <div class="mt-16 pt-8 border-t-4 border-black grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-          <div class="scroll-reveal scroll-reveal-scale delay-75 p-4 bg-white border-3 border-black shadow-brutal hover:-translate-y-1 transition-transform">
-            <div class="font-comic text-4xl sm:text-5xl tracking-wide">4+</div>
-            <div class="font-mono text-xs font-bold uppercase tracking-wider text-black/70 mt-1">Code &amp; Stack Learned</div>
+        <!-- Metric Proof Strip -->
+        <div class="mt-16 pt-8 border-t border-neutral-200 dark:border-neutral-800 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 text-center max-w-5xl mx-auto">
+          <div class="scroll-reveal scroll-reveal-scale delay-75 p-5 bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-2xl shadow-sm hover:shadow-md hover:-translate-y-1 transition-all">
+            <div class="font-sans font-extrabold text-3xl sm:text-4xl text-neutral-900 dark:text-white tracking-tight">4+</div>
+            <div class="font-sans text-xs font-medium text-neutral-500 dark:text-neutral-400 mt-1">Code & Stack Learned</div>
           </div>
-          <div class="scroll-reveal scroll-reveal-scale delay-150 p-4 bg-white border-3 border-black shadow-brutal hover:-translate-y-1 transition-transform">
-            <div class="font-comic text-4xl sm:text-5xl tracking-wide">2+</div>
-            <div class="font-mono text-xs font-bold uppercase tracking-wider text-black/70 mt-1">Projects</div>
+          <div class="scroll-reveal scroll-reveal-scale delay-150 p-5 bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-2xl shadow-sm hover:shadow-md hover:-translate-y-1 transition-all">
+            <div class="font-sans font-extrabold text-3xl sm:text-4xl text-neutral-900 dark:text-white tracking-tight">2+</div>
+            <div class="font-sans text-xs font-medium text-neutral-500 dark:text-neutral-400 mt-1">Projects</div>
           </div>
         </div>
 
@@ -844,30 +840,27 @@
     <!-- ========================================== -->
     <!-- SECTION: PROJECTS SECTION                  -->
     <!-- ========================================== -->
-    <section id="projects" class="py-16 md:py-24 border-b-4 border-black bg-neutral-50 relative">
+    <section id="projects" class="py-16 md:py-24 border-b border-neutral-200 dark:border-neutral-800 bg-neutral-50/70 dark:bg-[#0c0c0f] relative">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <!-- Section Header with Comic Badge -->
+        <!-- Section Header -->
         <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
           <div class="scroll-reveal scroll-reveal-left">
-            <div class="inline-block px-3 py-1 bg-black text-white font-mono text-xs font-bold uppercase tracking-widest border-2 border-black shadow-brutal-sm mb-3">
-              CHAPTER 01: SELECTED ARCHIVES
-            </div>
-            <h2 class="font-comic text-4xl sm:text-5xl md:text-6xl tracking-wide uppercase text-black leading-none">
-              FEATURED PROJECTS
+            <h2 class="font-sans font-extrabold text-3xl sm:text-4xl md:text-5xl tracking-tight text-neutral-900 dark:text-white leading-tight">
+              Featured Projects
             </h2>
-            <p class="font-sans text-base text-black/70 mt-2 max-w-xl">
-              Real-world web applications engineered for scalability, pixel-perfect UX, and unyielding code quality.
+            <p class="font-sans text-base text-neutral-600 dark:text-neutral-400 mt-2 max-w-xl">
+              Kumpulan proyek yang sudah dipusblish dan digunakan
             </p>
           </div>
 
           <!-- Interactive Category Filter Tabs -->
-          <div class="scroll-reveal scroll-reveal-right delay-100 flex flex-wrap items-center gap-2 p-1.5 bg-white border-3 border-black shadow-brutal" role="tablist" aria-label="Filter Projects">
-            <button type="button" class="project-filter-btn px-4 py-2 font-mono text-xs font-bold uppercase tracking-wider bg-black text-white border-2 border-black transition-all" data-filter="all" role="tab" aria-selected="true">
+          <div class="scroll-reveal scroll-reveal-right delay-100 flex flex-wrap items-center gap-1.5 p-1 bg-neutral-100 dark:bg-neutral-800/80 rounded-xl border border-neutral-200 dark:border-neutral-700" role="tablist" aria-label="Filter Projects">
+            <button type="button" class="project-filter-btn px-4 py-2 font-sans text-xs font-semibold rounded-lg bg-neutral-900 text-white dark:bg-white dark:text-neutral-900 shadow-sm transition-all" data-filter="all" role="tab" aria-selected="true">
               All (1)
             </button>
-            <button type="button" class="project-filter-btn px-4 py-2 font-mono text-xs font-bold uppercase tracking-wider bg-white text-black border-2 border-transparent hover:border-black transition-all" data-filter="fullstack" role="tab" aria-selected="false">
-              Full-Stack
+            <button type="button" class="project-filter-btn px-4 py-2 font-sans text-xs font-semibold rounded-lg text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-all" data-filter="fullstack" role="tab" aria-selected="false">
+              Web
             </button>
           </div>
         </div>
@@ -875,54 +868,60 @@
         <!-- Project Cards Grid -->
         <div id="projectsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-          <!-- PROJECT CARD 1: ComicCanvas -->
-          <article class="scroll-reveal scroll-reveal-scale delay-75 project-card bg-white border-4 border-black shadow-brutal-md flex flex-col justify-between group hover:-translate-y-1 hover:shadow-brutal-lg transition-all duration-200" data-category="fullstack" data-id="p1">
+          <!-- PROJECT CARD 1: CanvasCollab -->
+          <article class="scroll-reveal scroll-reveal-scale delay-75 project-card bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group overflow-hidden" data-category="fullstack" data-id="p1">
             <div>
-              <!-- Comic Panel Header / Visual Art -->
-              <div class="relative aspect-[16/10] bg-neutral-100 border-b-4 border-black overflow-hidden flex items-center justify-center p-6">
-                <div class="w-full h-full">
-                  <img src="src/foto/ss2.png">
+              <!-- Visual Art Header -->
+              <div class="relative aspect-[16/10] bg-neutral-100 dark:bg-neutral-800 border-b border-neutral-200 dark:border-neutral-800 overflow-hidden group/thumb">
+                <img
+                  id="projectPhoto1"
+                  src="foto/ss2.png"
+                  alt="CanvasCollab Studio Showcase"
+                  class="w-full h-full object-cover group-hover/thumb:scale-105 transition-transform duration-500 ease-out"
+                  loading="lazy"
+                />
+                <div class="absolute inset-0 bg-neutral-950/10 pointer-events-none"></div>
+
+                <!-- Badge Tags -->
+                <div class="absolute top-3 left-3 bg-white/95 dark:bg-neutral-900/95 backdrop-blur-xs px-2.5 py-1 rounded-md border border-neutral-200 dark:border-neutral-700 font-mono text-[11px] font-semibold text-neutral-800 dark:text-neutral-200 shadow-sm">
+                  WEB KELAS
                 </div>
-                <!-- Badge Tag -->
-                <div class="absolute top-3 left-3 bg-white px-2 py-0.5 border-2 border-black font-mono text-xs font-bold">
+                <div class="absolute top-3 right-3 bg-neutral-900/95 dark:bg-white/95 text-white dark:text-neutral-900 px-2.5 py-1 rounded-md font-mono text-[11px] font-semibold shadow-sm">
                   2026
-                </div>
-                <div class="absolute top-3 right-3 bg-black text-white px-2 py-0.5 font-mono text-xs font-bold">
-                  WEB PROFILE
                 </div>
               </div>
 
               <!-- Card Content -->
               <div class="p-6">
-                <!-- Unboxed Metadata Separators -->
-                <div class="flex items-center gap-2 font-mono text-xs text-black/70 mb-2">
-                  <span>TailwindCSS</span>
-                  <span aria-hidden="true">·</span>
-                  <span>JavaScript</span>
-                  <span aria-hidden="true">·</span>
+                <!-- Metadata Separators -->
+                <div class="flex items-center gap-2 font-mono text-xs text-neutral-500 dark:text-neutral-400 mb-2">
                   <span>HTML5</span>
                   <span aria-hidden="true">·</span>
-                  <span>GitHub Pages</span>
+                  <span>TAILWINDCSS</span>
+                  <span aria-hidden="true">·</span>
+                  <span>JAVASCRIPT</span>
+                  <span aria-hidden="true">·</span>
+                  <span>GITHUB PAGES</span>
                 </div>
 
-                <h3 class="font-comic text-2xl tracking-wide uppercase text-black group-hover:underline decoration-3 underline-offset-4 mb-2">
-                  X TJKT 1 WEB PROFILE
+                <h3 class="font-sans font-bold text-xl text-neutral-900 dark:text-white group-hover:text-neutral-600 dark:group-hover:text-neutral-300 transition-colors mb-2">
+                  WEB KELAS X TJKT 1
                 </h3>
                 
-                <p class="font-sans text-sm text-black/80 leading-relaxed mb-4">
-                  Profil web yang menampilkan informasi tentang kelas X TJKT 1, Deskripsi, Jadwal Kelas, &amp; Kenangan Kelas
+                <p class="font-sans text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed mb-4">
+                  Berisi sebuah data para siswa kelas X TJKT 1, Wali kelas, Struktur organisasi kelas, dan kumpulan kenangan event yang ada di SMK NEGERI 3 JEPARA
                 </p>
               </div>
             </div>
 
             <!-- Card Action Footer -->
-            <div class="p-6 pt-0 border-t-2 border-black/10 mt-2 flex items-center justify-between gap-3">
-              <a href="https://x-tjkt-1-class.github.io/X-TJKT-1-Profile-Web/" target="_blank" rel="noopener noreferrer" class="font-mono text-xs font-extrabold uppercase px-3 py-2 bg-neutral-100 hover:bg-neutral-200 border-2 border-black shadow-brutal-sm hover:-translate-y-0.5 active:translate-y-0 active:shadow-none transition-all inline-flex items-center gap-1" aria-label="Visit ComicCanvas Studio">
-                Visit ↗
+            <div class="p-6 pt-0 border-t border-neutral-100 dark:border-neutral-800 mt-2 flex items-center justify-between gap-3">
+              <a href="https://x-tjkt-1-class.github.io/X-TJKT-1-Profile-Web/" target="_blank" rel="noopener noreferrer" class="font-sans text-xs font-semibold px-4 py-2 bg-neutral-900 text-white dark:bg-white dark:text-neutral-900 hover:bg-neutral-800 rounded-lg shadow-sm hover:shadow transition-all inline-flex items-center gap-1.5" aria-label="Visit CanvasCollab Studio">
+                <span>VISIT</span>
+                <span aria-hidden="true">↗</span>
               </a>
             </div>
           </article>
-
 
         </div>
 
@@ -932,145 +931,166 @@
     <!-- ========================================== -->
     <!-- SECTION: SKILLS SECTION                    -->
     <!-- ========================================== -->
-    <section id="skills" class="py-16 md:py-24 border-b-4 border-black bg-white relative">
+    <section id="skills" class="py-16 md:py-24 border-b border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#09090b] relative">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <!-- Section Header -->
         <div class="scroll-reveal scroll-reveal-left mb-14">
-          <div class="inline-block px-3 py-1 bg-black text-white font-mono text-xs font-bold uppercase tracking-widest border-2 border-black shadow-brutal-sm mb-3">
-            CAPABILITIES
-          </div>
-          <h2 class="font-comic text-4xl sm:text-5xl md:text-6xl tracking-wide uppercase text-black leading-none">
-            SKILLS & TOOLS
+          <h2 class="font-sans font-extrabold text-3xl sm:text-4xl md:text-5xl tracking-tight text-neutral-900 dark:text-white leading-tight">
+            Skills &amp; Proficiencies
           </h2>
-          <p class="font-sans text-base text-black/70 mt-2 max-w-xl">
-            Battle-tested technical proficiencies and engineering habits honed across commercial production builds.
+          <p class="font-sans text-base text-neutral-600 dark:text-neutral-400 mt-2 max-w-xl">
+            Keahlian yang sudah dipelajari dan dipraktekkan ke dalam projek yang sudah digunakan
           </p>
         </div>
 
-        <!-- 3 Comic Skill Cards Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- 4 Skill Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
 
-          <!-- SKILL CATEGORY 1: Frontend Powers -->
-          <div class="scroll-reveal scroll-reveal-scale delay-75 skill-group-card bg-neutral-50 border-4 border-black p-6 shadow-brutal hover:-translate-y-1 hover:shadow-brutal-md transition-all">
-            <div class="w-12 h-12 bg-black text-white font-comic text-2xl flex items-center justify-center border-2 border-black mb-4">
-              &lt;/&gt;
+          <!-- SKILL CATEGORY 1: Frontend Architecture -->
+          <div class="scroll-reveal scroll-reveal-scale delay-75 skill-group-card bg-neutral-50/70 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-2xl p-6 shadow-sm hover:shadow-lg transition-all">
+            <div class="w-11 h-11 bg-white dark:bg-neutral-800 flex items-center justify-center rounded-xl border border-neutral-200 dark:border-neutral-700 mb-4 shadow-xs" title="Frontend Code (&lt;/&gt;)">
+              <svg class="w-5 h-5 text-neutral-900 dark:text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-label="Closing Tag (&lt;/&gt;)">
+                <path d="m18 16 4-4-4-4" />
+                <path d="m6 8-4 4 4 4" />
+                <path d="m14.5 4-5 16" />
+              </svg>
             </div>
-            <h3 class="font-comic text-2xl tracking-wide uppercase text-black mb-1">
-              CORE LANGUAGES
+            <h3 class="font-sans font-bold text-lg text-neutral-900 dark:text-white mb-0.5">
+              CORE LANGUAGE
             </h3>
-            <p class="font-mono text-xs text-black/70 mb-5">
-              Bahasa pemrograman yang dipelajari
+            <p class="font-mono text-xs text-neutral-500 dark:text-neutral-400 mb-5">
+              BAHASA PEMROGRAMMAN YANG SUDAH DI PELAJARI
             </p>
 
-            <ul class="space-y-3 font-mono text-xs font-bold">
-              <li class="skill-badge-item p-2.5 bg-white border-2 border-black shadow-brutal-sm flex items-center justify-between cursor-pointer hover:bg-black hover:text-white transition-colors" data-skill="HTML5 & Semantic DOM" data-level="98%" data-detail="Semantic layout, microdata, strict accessibility compliance.">
-                <span>HTML5 / Semantic Web</span>
+            <ul class="space-y-2.5 font-sans text-xs">
+              <li class="skill-badge-item p-2.5 bg-white dark:bg-neutral-800/80 rounded-xl border border-neutral-200 dark:border-neutral-700/80 flex items-center justify-between cursor-pointer hover:border-neutral-400 dark:hover:border-neutral-500 transition-colors shadow-2xs" data-skill="HTML5 & Semantic DOM" data-level="98%" data-detail="Semantic layout, microdata, strict accessibility compliance.">
+                <span class="font-medium text-neutral-800 dark:text-neutral-200">HTML5</span>
+                <span class="text-[11px] font-mono font-semibold bg-neutral-100 dark:bg-neutral-700 text-neutral-700 dark:text-neutral-300 px-2 py-0.5 rounded border border-neutral-200 dark:border-neutral-600">85%</span>
               </li>
-              <li class="skill-badge-item p-2.5 bg-white border-2 border-black shadow-brutal-sm flex items-center justify-between cursor-pointer hover:bg-black hover:text-white transition-colors" data-skill="CSS3 & Tailwind CSS" data-level="96%" data-detail="Modern CSS grid, subgrid, container queries, custom utility design systems.">
-                <span>Tailwind & Modern CSS</span>
+              <li class="skill-badge-item p-2.5 bg-white dark:bg-neutral-800/80 rounded-xl border border-neutral-200 dark:border-neutral-700/80 flex items-center justify-between cursor-pointer hover:border-neutral-400 dark:hover:border-neutral-500 transition-colors shadow-2xs" data-skill="CSS3 & Tailwind CSS" data-level="96%" data-detail="Modern CSS grid, subgrid, container queries, custom utility design systems.">
+                <span class="font-medium text-neutral-800 dark:text-neutral-200">Tailwind &amp; Modern CSS</span>
+                <span class="text-[11px] font-mono font-semibold bg-neutral-100 dark:bg-neutral-700 text-neutral-700 dark:text-neutral-300 px-2 py-0.5 rounded border border-neutral-200 dark:border-neutral-600">70%</span>
               </li>
-              <li class="skill-badge-item p-2.5 bg-white border-2 border-black shadow-brutal-sm flex items-center justify-between cursor-pointer hover:bg-black hover:text-white transition-colors" data-skill="JavaScript ESNext & TS" data-level="95%" data-detail="Deep event loop mastery, async paradigms, strict type systems.">
-                <span>JavaScript</span>
+              <li class="skill-badge-item p-2.5 bg-white dark:bg-neutral-800/80 rounded-xl border border-neutral-200 dark:border-neutral-700/80 flex items-center justify-between cursor-pointer hover:border-neutral-400 dark:hover:border-neutral-500 transition-colors shadow-2xs" data-skill="JavaScript ESNext & TS" data-level="95%" data-detail="Deep event loop mastery, async paradigms, strict type systems.">
+                <span class="font-medium text-neutral-800 dark:text-neutral-200">JavaScript / TypeScript</span>
+                <span class="text-[11px] font-mono font-semibold bg-neutral-100 dark:bg-neutral-700 text-neutral-700 dark:text-neutral-300 px-2 py-0.5 rounded border border-neutral-200 dark:border-neutral-600">65%</span>
               </li>
-              <li class="skill-badge-item p-2.5 bg-white border-2 border-black shadow-brutal-sm flex items-center justify-between cursor-pointer hover:bg-black hover:text-white transition-colors" data-skill="Canvas & Micro-Animations" data-level="90%" data-detail="60fps hardware accelerated rendering and CSS physics.">
-                <span>Python</span>
+              <li class="skill-badge-item p-2.5 bg-white dark:bg-neutral-800/80 rounded-xl border border-neutral-200 dark:border-neutral-700/80 flex items-center justify-between cursor-pointer hover:border-neutral-400 dark:hover:border-neutral-500 transition-colors shadow-2xs" data-skill="Canvas & Micro-Animations" data-level="90%" data-detail="60fps hardware accelerated rendering and CSS physics.">
+                <span class="font-medium text-neutral-800 dark:text-neutral-200">Python</span>
+                <span class="text-[11px] font-mono font-semibold bg-neutral-100 dark:bg-neutral-700 text-neutral-700 dark:text-neutral-300 px-2 py-0.5 rounded border border-neutral-200 dark:border-neutral-600">45%</span>
               </li>
             </ul>
           </div>
 
-          <!-- SKILL CATEGORY 2: Backend & Systems -->
-          <div class="scroll-reveal scroll-reveal-scale delay-150 skill-group-card bg-neutral-50 border-4 border-black p-6 shadow-brutal hover:-translate-y-1 hover:shadow-brutal-md transition-all">
-            <div class="w-12 h-12 bg-black text-white font-comic text-2xl flex items-center justify-center border-2 border-black mb-4">
-              <iconify-icon icon="simple-icons:openai" class="text-white text-2xl dark:text-black"></iconify-icon>
+          <!-- SKILL CATEGORY 2: Backend & Distributed Systems (Gemini AI logo) -->
+          <div class="scroll-reveal scroll-reveal-scale delay-150 skill-group-card bg-neutral-50/70 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-2xl p-6 shadow-sm hover:shadow-lg transition-all">
+            <div class="w-11 h-11 bg-white dark:bg-neutral-800 flex items-center justify-center rounded-xl border border-neutral-200 dark:border-neutral-700 mb-4 shadow-xs" title="Gemini AI">
+              <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Gemini AI Logo">
+                <defs>
+                  <linearGradient id="geminiIconGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#4E85EB" />
+                    <stop offset="50%" stop-color="#9B72CB" />
+                    <stop offset="100%" stop-color="#D96570" />
+                  </linearGradient>
+                </defs>
+                <path d="M12 1C12 7.075 7.075 12 1 12C7.075 12 12 16.925 12 23C12 16.925 16.925 12 23 12C16.925 12 12 7.075 12 1Z" fill="url(#geminiIconGrad)" />
+              </svg>
             </div>
-            <h3 class="font-comic text-2xl tracking-wide uppercase text-black mb-1">
-              Ai For Effiency
+            <h3 class="font-sans font-bold text-lg text-neutral-900 dark:text-white mb-0.5">
+              AI FOR EFFICIENCY
             </h3>
-            <p class="font-mono text-xs text-black/70 mb-5">
+            <p class="font-mono text-xs text-neutral-500 dark:text-neutral-400 mb-5">
               Ai yang digunakan untuk membantu
             </p>
 
-            <ul class="space-y-3 font-mono text-xs font-bold">
-              <li class="skill-badge-item p-2.5 bg-white border-2 border-black shadow-brutal-sm flex items-center justify-between cursor-pointer hover:bg-black hover:text-white transition-colors" data-skill="Node.js & Express" data-level="92%" data-detail="RESTful microservices, streaming pipelines, middleware auth chains.">
-                <span>Claude</span>
+            <ul class="space-y-2.5 font-sans text-xs">
+              <li class="skill-badge-item p-2.5 bg-white dark:bg-neutral-800/80 rounded-xl border border-neutral-200 dark:border-neutral-700/80 flex items-center justify-between cursor-pointer hover:border-neutral-400 dark:hover:border-neutral-500 transition-colors shadow-2xs" data-skill="Node.js & Express" data-level="92%" data-detail="RESTful microservices, streaming pipelines, middleware auth chains.">
+                <span class="font-medium text-neutral-800 dark:text-neutral-200">Gemini Ai</span>
               </li>
-              <li class="skill-badge-item p-2.5 bg-white border-2 border-black shadow-brutal-sm flex items-center justify-between cursor-pointer hover:bg-black hover:text-white transition-colors" data-skill="PostgreSQL & SQL" data-level="88%" data-detail="Schema normalization, index tuning, transaction isolation, migrations.">
-                <span>Gemini Ai</span>
+              <li class="skill-badge-item p-2.5 bg-white dark:bg-neutral-800/80 rounded-xl border border-neutral-200 dark:border-neutral-700/80 flex items-center justify-between cursor-pointer hover:border-neutral-400 dark:hover:border-neutral-500 transition-colors shadow-2xs" data-skill="PostgreSQL & SQL" data-level="88%" data-detail="Schema normalization, index tuning, transaction isolation, migrations.">
+                <span class="font-medium text-neutral-800 dark:text-neutral-200">ChatGPT</span>
               </li>
-              <li class="skill-badge-item p-2.5 bg-white border-2 border-black shadow-brutal-sm flex items-center justify-between cursor-pointer hover:bg-black hover:text-white transition-colors" data-skill="RESTful & WebSockets" data-level="94%" data-detail="Low-latency duplex communication, rate limiting, and webhook dispatch.">
-                <span>ChatGPT</span>
+              <li class="skill-badge-item p-2.5 bg-white dark:bg-neutral-800/80 rounded-xl border border-neutral-200 dark:border-neutral-700/80 flex items-center justify-between cursor-pointer hover:border-neutral-400 dark:hover:border-neutral-500 transition-colors shadow-2xs" data-skill="RESTful & WebSockets" data-level="94%" data-detail="Low-latency duplex communication, rate limiting, and webhook dispatch.">
+                <span class="font-medium text-neutral-800 dark:text-neutral-200">Claude Ai</span>
               </li>
-              <li class="skill-badge-item p-2.5 bg-white border-2 border-black shadow-brutal-sm flex items-center justify-between cursor-pointer hover:bg-black hover:text-white transition-colors" data-skill="Authentication & Security" data-level="90%" data-detail="JWT, OAuth2 flows, CSRF protection, and AES-GCM data encryption.">
-                <span>Google Ai Studio</span>
+              <li class="skill-badge-item p-2.5 bg-white dark:bg-neutral-800/80 rounded-xl border border-neutral-200 dark:border-neutral-700/80 flex items-center justify-between cursor-pointer hover:border-neutral-400 dark:hover:border-neutral-500 transition-colors shadow-2xs" data-skill="Authentication & Security" data-level="90%" data-detail="JWT, OAuth2 flows, CSRF protection, and AES-GCM data encryption.">
+                <span class="font-medium text-neutral-800 dark:text-neutral-200">Ai AGENT</span>
               </li>
             </ul>
           </div>
 
-          <!-- SKILL CATEGORY 3: Tooling & Performance -->
-          <div class="scroll-reveal scroll-reveal-scale delay-225 skill-group-card bg-neutral-50 border-4 border-black p-6 shadow-brutal hover:-translate-y-1 hover:shadow-brutal-md transition-all">
-            <div class="w-12 h-12 bg-black text-white font-comic text-2xl flex items-center justify-center border-2 border-black mb-4">
-              <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
-                <path d="M0 0h24v24H0z" fill="none" />
-                <g fill="none">
-                  <g fill="currentColor" clip-path="url(#SVGXv8lpc2Y)">
-                    <path d="M.228 8.37s-.584-.427.117-.995L1.98 5.897s.467-.497.962-.064l15.081 11.542v5.534s-.007.87-1.11.774z" />
-                    <path d="M4.116 11.937L.228 15.509s-.4.3 0 .837l1.805 1.66s.429.465 1.062-.065l4.121-3.158zm6.824.029l7.13-5.502l-.047-5.505s-.305-1.202-1.32-.576L7.216 9.11z" />
-                    <path d="M16.912 23.69c.414.428.916.288.916.288l5.556-2.767c.711-.49.611-1.098.611-1.098V3.588c0-.726-.735-.977-.735-.977L18.444.264c-1.052-.657-1.741.119-1.741.119s.886-.645 1.32.576v21.85c0 .15-.032.297-.095.43c-.127.259-.402.5-1.062.4z" />
-                  </g>
-                  <defs>
-                    <clipPath id="SVGXv8lpc2Y">
-                      <path fill="#fff" d="M0 0h24v24H0z" />
-                    </clipPath>
-                  </defs>
-                </g>
+          <!-- SKILL CATEGORY 3: Developer Tooling (VS Code logo) -->
+          <div class="scroll-reveal scroll-reveal-scale delay-225 skill-group-card bg-neutral-50/70 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-2xl p-6 shadow-sm hover:shadow-lg transition-all">
+            <div class="w-11 h-11 bg-white dark:bg-neutral-800 flex items-center justify-center rounded-xl border border-neutral-200 dark:border-neutral-700 mb-4 shadow-xs" title="Visual Studio Code">
+              <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Visual Studio Code Logo">
+                <defs>
+                  <linearGradient id="vscodeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#2488EA" />
+                    <stop offset="100%" stop-color="#0065A9" />
+                  </linearGradient>
+                </defs>
+                <path d="M23.15 2.587L18.21.21a1.494 1.494 0 0 0-1.705.29l-9.46 8.63-4.12-3.128a.999.999 0 0 0-1.276.057L.327 7.261A1 1 0 0 0 .326 8.74L3.899 12 .326 15.26a1 1 0 0 0 .001 1.479L1.65 17.94a.999.999 0 0 0 1.276.057l4.12-3.128 9.46 8.63a1.492 1.492 0 0 0 1.704.29l4.94-2.377A1.5 1.5 0 0 0 24 20.06V3.939a1.5 1.5 0 0 0-.85-1.352zm-5.146 14.861L10.826 12l7.178-5.448v10.896z" fill="url(#vscodeGrad)"/>
               </svg>
             </div>
-            <h3 class="font-comic text-2xl tracking-wide uppercase text-black mb-1">
+            <h3 class="font-sans font-bold text-lg text-neutral-900 dark:text-white mb-0.5">
               TOOLS &amp; SOFTWARE
             </h3>
-            <p class="font-mono text-xs text-black/70 mb-5">
-              Tools yang digunakan
+            <p class="font-mono text-xs text-neutral-500 dark:text-neutral-400 mb-5">
+              Alat dan Software yang digunakan
             </p>
 
-            <ul class="space-y-3 font-mono text-xs font-bold">
-              <li class="skill-badge-item p-2.5 bg-white border-2 border-black shadow-brutal-sm flex items-center justify-between cursor-pointer hover:bg-black hover:text-white transition-colors" data-skill="Git & CI/CD Pipelines" data-level="94%" data-detail="Trunk-based development, semantic commits, automated lint/build testing.">
-                <span>Visual Studio Code</span>
+            <ul class="space-y-2.5 font-sans text-xs">
+              <li class="skill-badge-item p-2.5 bg-white dark:bg-neutral-800/80 rounded-xl border border-neutral-200 dark:border-neutral-700/80 flex items-center justify-between cursor-pointer hover:border-neutral-400 dark:hover:border-neutral-500 transition-colors shadow-2xs" data-skill="Git & CI/CD Pipelines" data-level="94%" data-detail="Trunk-based development, semantic commits, automated lint/build testing.">
+                <span class="font-medium text-neutral-800 dark:text-neutral-200">Git &amp; GitHub</span>
               </li>
-              <li class="skill-badge-item p-2.5 bg-white border-2 border-black shadow-brutal-sm flex items-center justify-between cursor-pointer hover:bg-black hover:text-white transition-colors" data-skill="Core Web Vitals & Perf" data-level="95%" data-detail="Sub-100ms LCP, 0 CLS, tree shaking, and code splitting optimizations.">
-                <span>Google Ai Studio</span>
+              <li class="skill-badge-item p-2.5 bg-white dark:bg-neutral-800/80 rounded-xl border border-neutral-200 dark:border-neutral-700/80 flex items-center justify-between cursor-pointer hover:border-neutral-400 dark:hover:border-neutral-500 transition-colors shadow-2xs" data-skill="Core Web Vitals & Perf" data-level="95%" data-detail="Sub-100ms LCP, 0 CLS, tree shaking, and code splitting optimizations.">
+                <span class="font-medium text-neutral-800 dark:text-neutral-200">Visual Studio Code</span>
               </li>
-              <li class="skill-badge-item p-2.5 bg-white border-2 border-black shadow-brutal-sm flex items-center justify-between cursor-pointer hover:bg-black hover:text-white transition-colors" data-skill="Vite & Bundlers" data-level="92%" data-detail="Modern ES module tooling, HMR configurations, roll-up plugins.">
-                <span>Zed</span>
+              <li class="skill-badge-item p-2.5 bg-white dark:bg-neutral-800/80 rounded-xl border border-neutral-200 dark:border-neutral-700/80 flex items-center justify-between cursor-pointer hover:border-neutral-400 dark:hover:border-neutral-500 transition-colors shadow-2xs" data-skill="Vite & Bundlers" data-level="92%" data-detail="Modern ES module tooling, HMR configurations, roll-up plugins.">
+                <span class="font-medium text-neutral-800 dark:text-neutral-200">Google Ai Studio</span>
               </li>
-              <li class="skill-badge-item p-2.5 bg-white border-2 border-black shadow-brutal-sm flex items-center justify-between cursor-pointer hover:bg-black hover:text-white transition-colors" data-skill="WCAG 2.2 AA Accessibility" data-level="96%" data-detail="Screen reader testing, semantic ARIA roles, and keyboard focus trap handling.">
-                <span>VMware Workstation</span>
+              <li class="skill-badge-item p-2.5 bg-white dark:bg-neutral-800/80 rounded-xl border border-neutral-200 dark:border-neutral-700/80 flex items-center justify-between cursor-pointer hover:border-neutral-400 dark:hover:border-neutral-500 transition-colors shadow-2xs" data-skill="WCAG 2.2 AA Accessibility" data-level="96%" data-detail="Screen reader testing, semantic ARIA roles, and keyboard focus trap handling.">
+                <span class="font-medium text-neutral-800 dark:text-neutral-200">Zed</span>
+              <li class="skill-badge-item p-2.5 bg-white dark:bg-neutral-800/80 rounded-xl border border-neutral-200 dark:border-neutral-700/80 flex items-center justify-between cursor-pointer hover:border-neutral-400 dark:hover:border-neutral-500 transition-colors shadow-2xs" data-skill="WCAG 2.2 AA Accessibility" data-level="96%" data-detail="Screen reader testing, semantic ARIA roles, and keyboard focus trap handling.">
+                <span class="font-medium text-neutral-800 dark:text-neutral-200">VMware Workstation</span>
               </li>
             </ul>
           </div>
 
-        </div>
-
-        <!-- Interactive Skill Dossier Inspector Bar (Updated dynamically on click) -->
-        <div id="skillInspector" class="scroll-reveal scroll-reveal-scale delay-150 mt-8 p-5 bg-black text-white border-3 border-black shadow-brutal-md flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-          <div class="flex items-center gap-3">
-            <span class="text-2xl">⚡</span>
-            <div>
-              <div class="font-comic text-xl tracking-wide flex items-center gap-2">
-                <span>SUPERPOWER INSPECTOR:</span>
-                <span id="inspectSkillName" class="underline decoration-2">HTML5 / Semantic Web</span>
-              </div>
-              <p id="inspectSkillDesc" class="font-mono text-xs text-white/80 mt-0.5">
-                Semantic layout, microdata, strict accessibility compliance.
-              </p>
+          <!-- SKILL CATEGORY 4: Cloud & Architecture (Linux Tux logo) -->
+          <div class="scroll-reveal scroll-reveal-scale delay-300 skill-group-card bg-neutral-50/70 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-2xl p-6 shadow-sm hover:shadow-lg transition-all">
+            <div class="w-11 h-11 bg-white dark:bg-neutral-800 flex items-center justify-center rounded-xl border border-neutral-200 dark:border-neutral-700 mb-4 shadow-xs p-1 overflow-hidden" title="Linux OS (Sitting Tux)">
+              <img
+                src="/src/assets/images/tux.svg"
+                alt="Tux Linux Duduk (Sitting Penguin Mascot)"
+                class="w-full h-full object-contain select-none"
+                loading="lazy"
+              />
             </div>
+            <h3 class="font-sans font-bold text-lg text-neutral-900 dark:text-white mb-0.5">
+              OPERATING SYSTEMS
+            </h3>
+            <p class="font-mono text-xs text-neutral-500 dark:text-neutral-400 mb-5">
+              Sistem Operasi yang digunakan
+            </p>
+
+            <ul class="space-y-2.5 font-sans text-xs">
+              <li class="skill-badge-item p-2.5 bg-white dark:bg-neutral-800/80 rounded-xl border border-neutral-200 dark:border-neutral-700/80 flex items-center justify-between cursor-pointer hover:border-neutral-400 dark:hover:border-neutral-500 transition-colors shadow-2xs" data-skill="AWS & Cloud Architecture" data-level="92%" data-detail="High-availability VPC design, serverless lambdas, and resilient S3 storage.">
+                <span class="font-medium text-neutral-800 dark:text-neutral-200">Windows 11 PRO</span>
+              </li>
+              <li class="skill-badge-item p-2.5 bg-white dark:bg-neutral-800/80 rounded-xl border border-neutral-200 dark:border-neutral-700/80 flex items-center justify-between cursor-pointer hover:border-neutral-400 dark:hover:border-neutral-500 transition-colors shadow-2xs" data-skill="Docker & Containers" data-level="90%" data-detail="Lightweight multi-stage container images and compose orchestration.">
+                <span class="font-medium text-neutral-800 dark:text-neutral-200">CachyOS LINUX</span>
+              </li>
+              <li class="skill-badge-item p-2.5 bg-white dark:bg-neutral-800/80 rounded-xl border border-neutral-200 dark:border-neutral-700/80 flex items-center justify-between cursor-pointer hover:border-neutral-400 dark:hover:border-neutral-500 transition-colors shadow-2xs" data-skill="CI/CD Pipelines" data-level="94%" data-detail="Automated testing, lint gates, and continuous delivery with GitHub Actions.">
+                <span class="font-medium text-neutral-800 dark:text-neutral-200">XOS KINGFINIX</span>
+              </li>
+              <li class="skill-badge-item p-2.5 bg-white dark:bg-neutral-800/80 rounded-xl border border-neutral-200 dark:border-neutral-700/80 flex items-center justify-between cursor-pointer hover:border-neutral-400 dark:hover:border-neutral-500 transition-colors shadow-2xs" data-skill="Linux & Shell Automation" data-level="88%" data-detail="POSIX shell automation, reverse proxy configuration, and daemon management.">
+                <span class="font-medium text-neutral-800 dark:text-neutral-200">Android 14</span>
+              </li>
+            </ul>
           </div>
-          <div class="flex items-center gap-3 shrink-0">
-            <span class="font-mono text-xs uppercase tracking-wider text-white/70">MASTERY LEVEL:</span>
-            <span id="inspectSkillLevel" class="font-comic text-3xl px-3 py-1 bg-white text-black border-2 border-white shadow-brutal-sm">
-              75%
-            </span>
-          </div>
+
         </div>
 
       </div>
@@ -1079,119 +1099,116 @@
     <!-- ========================================== -->
     <!-- SECTION: EDUCATION SECTION                 -->
     <!-- ========================================== -->
-    <section id="education" class="py-16 md:py-24 border-b-4 border-black bg-neutral-50 relative">
+    <section id="education" class="py-20 md:py-28 border-b border-neutral-200 dark:border-neutral-800 bg-neutral-50/60 dark:bg-neutral-900/30 relative">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <!-- Section Header -->
         <div class="mb-14 scroll-reveal scroll-reveal-left">
-          <div class="inline-block px-3 py-1 bg-black text-white font-mono text-xs font-bold uppercase tracking-widest border-2 border-black shadow-brutal-sm mb-3">
-            ACADEMIC 
-          </div>
-          <h2 class="font-comic text-4xl sm:text-5xl md:text-6xl tracking-wide uppercase text-black leading-none">
-            EDUCATION TIMELINE
+          <h2 class="font-sans font-extrabold text-3xl sm:text-4xl md:text-5xl tracking-tight text-neutral-900 dark:text-white">
+            Education Timeline
           </h2>
-          <p class="font-sans text-base text-black/70 mt-2 max-w-xl">
-            RIWAYAT PENDIDIKAN SAYA DAN PERJALANAN SAYA MENUJU KEMASA DEPAN
+          <p class="font-sans text-base text-neutral-600 dark:text-neutral-400 mt-2 max-w-xl">
+            Perjalanan sekolah untuk menuju Masa depan yang cerah dan siap untuk masa yang akan datang
           </p>
         </div>
 
         <!-- Timeline / Structured Card Layout -->
-        <div class="relative border-l-4 border-black ml-4 sm:ml-8 pl-6 sm:pl-10 space-y-12">
+        <div class="relative border-l border-neutral-200 dark:border-neutral-800 ml-3 sm:ml-6 pl-6 sm:pl-10 space-y-10">
           
           <!-- TIMELINE ITEM 1 -->
           <div class="relative group scroll-reveal scroll-reveal-left delay-75">
             <!-- Node Marker -->
-            <div class="absolute -left-[35px] sm:-left-[51px] top-1.5 w-6 h-6 sm:w-7 sm:h-7 bg-white border-4 border-black group-hover:bg-black transition-colors"></div>
+            <div class="absolute -left-[31px] sm:-left-[47px] top-6 w-3.5 h-3.5 rounded-full bg-neutral-900 dark:bg-white ring-4 ring-white dark:ring-neutral-950 transition-colors"></div>
             
-            <div class="bg-white border-4 border-black p-6 sm:p-8 shadow-brutal-md hover:-translate-y-1 hover:shadow-brutal-lg transition-all">
+            <div class="bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-2xl p-6 sm:p-8 shadow-sm hover:shadow-md transition-all">
               <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
-                <span class="font-mono text-xs font-extrabold uppercase bg-black text-white px-3 py-1 inline-block border border-black shadow-brutal-sm">
-                  2026 — SEKARANG
+                <span class="text-xs font-bold uppercase bg-neutral-900 text-white dark:bg-white dark:text-neutral-900 px-3 py-1 rounded-full inline-block">
+                  2026 — Sekarang
                 </span>
-                <span class="font-mono text-xs font-bold text-black/70">
+                <span class="text-xs font-semibold text-neutral-500 dark:text-neutral-400">
                   SMK NEGERI 3 JEPARA
                 </span>
               </div>
 
-              <h3 class="font-comic text-2xl sm:text-3xl tracking-wide uppercase text-black mb-1">
+              <h3 class="font-sans font-bold text-xl sm:text-2xl text-neutral-900 dark:text-white mb-1.5">
                 SMK NEGERI 3 JEPARA
               </h3>
               
-              <div class="font-mono text-sm font-bold text-black/80 mb-4 flex items-center gap-2">
-                <span>SEKOLAH KEAHLIAN</span>
+              <div class="text-sm font-medium text-neutral-600 dark:text-neutral-400 mb-4 flex items-center gap-2">
+                <span>SEKOLAH KEJURUAN</span>
                 <span aria-hidden="true">·</span>
-                <span>TEKNIK JARINGAN KOMPUTER &amp; TELEKOMUNIKASI</span>
+                <span>TEKNIK JARINGAN KOMPUTER DAN TELEKOMUNIKASI</span>
               </div>
 
-              <p class="font-sans text-sm text-black/80 leading-relaxed mb-4">
-                Specialized in distributed systems and Human-Computer Interaction (HCI). Capstone Project: <em>"Sub-50ms Delta Compression for Multi-User Collaborative Canvas Applications"</em> awarded Highest Departmental Honors.
+              <p class="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed mb-4">
+                Menekuni jurusan <b>Teknik Jaringan Komputer &amp; Telekomunikasi</b> serta mempelajari dan mempraktekkan dasar-dasar <b>pemrogramman</b>
               </p>
 
               <!-- Coursework / Highlights -->
-              <div class="pt-4 border-t-2 border-black/10 flex flex-wrap items-center gap-2 font-mono text-xs font-bold">
-                <span class="text-black/60">Achievement:</span>
-                <span class="bg-neutral-100 px-2 py-1 border border-black">COMING SOON</span>
+              <div class="pt-4 border-t border-neutral-100 dark:border-neutral-800 flex flex-wrap items-center gap-2 text-xs font-medium">
+                <span class="text-neutral-400 dark:text-neutral-500 font-semibold uppercase tracking-wider text-[11px]">Achievement:</span>
+                <span class="bg-neutral-100 dark:bg-neutral-800/80 text-neutral-700 dark:text-neutral-300 px-2.5 py-1 rounded-md border border-neutral-200/70 dark:border-neutral-700/60">Coming Soon</span>
               </div>
             </div>
           </div>
 
           <!-- TIMELINE ITEM 2 -->
           <div class="relative group scroll-reveal scroll-reveal-left delay-150">
-            <div class="absolute -left-[35px] sm:-left-[51px] top-1.5 w-6 h-6 sm:w-7 sm:h-7 bg-white border-4 border-black group-hover:bg-black transition-colors"></div>
+            <div class="absolute -left-[31px] sm:-left-[47px] top-6 w-3.5 h-3.5 rounded-full bg-neutral-900 dark:bg-white ring-4 ring-white dark:ring-neutral-950 transition-colors"></div>
             
-            <div class="bg-white border-4 border-black p-6 sm:p-8 shadow-brutal-md hover:-translate-y-1 hover:shadow-brutal-lg transition-all">
+            <div class="bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-2xl p-6 sm:p-8 shadow-sm hover:shadow-md transition-all">
               <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
-                <span class="font-mono text-xs font-extrabold uppercase bg-neutral-100 text-black px-3 py-1 inline-block border-2 border-black shadow-brutal-sm">
+                <span class="text-xs font-bold uppercase bg-neutral-100 text-neutral-800 dark:bg-neutral-800 dark:text-neutral-200 px-3 py-1 rounded-full inline-block border border-neutral-200 dark:border-neutral-700">
                   2023 — 2026
                 </span>
-                <span class="font-mono text-xs font-bold text-black/70">
+                <span class="text-xs font-semibold text-neutral-500 dark:text-neutral-400">
                   SMP NEGERI 5 JEPARA
                 </span>
               </div>
 
-              <h3 class="font-comic text-2xl sm:text-3xl tracking-wide uppercase text-black mb-1">
+              <h3 class="font-sans font-bold text-xl sm:text-2xl text-neutral-900 dark:text-white mb-1.5">
                 SMP NEGERI 5 JEPARA
               </h3>
               
-              <div class="font-mono text-sm font-bold text-black/80 mb-4 flex items-center gap-2">
+              <div class="text-sm font-medium text-neutral-600 dark:text-neutral-400 mb-4 flex items-center gap-2">
                 <span>SEKOLAH MENENGAH PERTAMA</span>
               </div>
 
-              <p class="font-sans text-sm text-black/80 leading-relaxed mb-4">
-                Hands-on immersion in web standards, relational database architecture, client-side application design, and modern frontend frameworks. Lead developer for the university student portal overhaul.
+              <p class="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed mb-4">
+                Sudah menaruh minat serta ketertarikan pada bidang <b>Informatika</b> dan berhasil <b>Menjuarai</b> sebuah ajang perlombaan bidang olah raga pada cabor atletik lempar lembing putra
               </p>
 
-              <div class="pt-4 border-t-2 border-black/10 flex flex-wrap items-center gap-2 font-mono text-xs font-bold">
-                <span class="text-black/60">Achievement:</span>
-                <span class="bg-neutral-100 px-2 py-1 border border-black">Juara Atletik Lempar Lembing Putra</span>
+              <div class="pt-4 border-t border-neutral-100 dark:border-neutral-800 flex flex-wrap items-center gap-2 text-xs font-medium">
+                <span class="text-neutral-400 dark:text-neutral-500 font-semibold uppercase tracking-wider text-[11px]">Achievement:</span>
+                <span class="bg-neutral-100 dark:bg-neutral-800/80 text-neutral-700 dark:text-neutral-300 px-2.5 py-1 rounded-md border border-neutral-200/70 dark:border-neutral-700/60">JUARA ATLETIK LEMPAR LEMBING PUTRA</span>
               </div>
             </div>
           </div>
 
           <!-- TIMELINE ITEM 3 -->
           <div class="relative group scroll-reveal scroll-reveal-left delay-225">
-            <div class="absolute -left-[35px] sm:-left-[51px] top-1.5 w-6 h-6 sm:w-7 sm:h-7 bg-white border-4 border-black group-hover:bg-black transition-colors"></div>
+            <div class="absolute -left-[31px] sm:-left-[47px] top-6 w-3.5 h-3.5 rounded-full bg-neutral-900 dark:bg-white ring-4 ring-white dark:ring-neutral-950 transition-colors"></div>
             
-            <div class="bg-white border-4 border-black p-6 sm:p-8 shadow-brutal-md hover:-translate-y-1 hover:shadow-brutal-lg transition-all">
+            <div class="bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-2xl p-6 sm:p-8 shadow-sm hover:shadow-md transition-all">
               <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
-                <span class="font-mono text-xs font-extrabold uppercase bg-neutral-100 text-black px-3 py-1 inline-block border-2 border-black shadow-brutal-sm">
-                  2017 · 2023
+                <span class="text-xs font-bold uppercase bg-neutral-100 text-neutral-800 dark:bg-neutral-800 dark:text-neutral-200 px-3 py-1 rounded-full inline-block border border-neutral-200 dark:border-neutral-700">
+                  2017 · 2023 
                 </span>
-                <span class="font-mono text-xs font-bold text-black/70">
+                <span class="text-xs font-semibold text-neutral-500 dark:text-neutral-400">
                   SD NEGERI 4 PANGGANG
                 </span>
               </div>
 
-              <h3 class="font-comic text-2xl sm:text-3xl tracking-wide uppercase text-black mb-1">
+              <h3 class="font-sans font-bold text-xl sm:text-2xl text-neutral-900 dark:text-white mb-1.5">
                 SD NEGERI 4 PANGGANG
               </h3>
               
-              <div class="font-mono text-sm font-bold text-black/80 mb-4 flex items-center gap-2">
+              <div class="text-sm font-medium text-neutral-600 dark:text-neutral-400 mb-4 flex items-center gap-2">
                 <span>SEKOLAH DASAR</span>
               </div>
 
-              <p class="font-sans text-sm text-black/80 leading-relaxed mb-4">
-                Six-month intensive residency focused on Web Performance, Core Web Vitals optimization, W3C accessibility compliance, and contributing patches to open-source developer tooling.
+              <p class="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed mb-4">
+                Tertarik pada seluruh cabang olahraga dan menekuninya terutama pada bidang <b>Triathlon</b>, dan <b>Atletik</b>
               </p>
             </div>
           </div>
@@ -1204,73 +1221,64 @@
     <!-- ========================================== -->
     <!-- SECTION: CERTIFICATES SECTION              -->
     <!-- ========================================== -->
-    <section id="certificates" class="py-16 md:py-24 border-b-4 border-black bg-white relative">
+    <section id="certificates" class="py-20 md:py-28 border-b border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-950 relative">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <!-- Section Header -->
         <div class="mb-14 scroll-reveal scroll-reveal-left">
-          <div class="inline-block px-3 py-1 bg-black text-white font-mono text-xs font-bold uppercase tracking-widest border-2 border-black shadow-brutal-sm mb-3">
-            ACCREDITED CREDENTIALS
-          </div>
-          <h2 class="font-comic text-4xl sm:text-5xl md:text-6xl tracking-wide uppercase text-black leading-none">
-            LICENSES & CERTIFICATIONS
+          <h2 class="font-sans font-extrabold text-3xl sm:text-4xl md:text-5xl tracking-tight text-neutral-900 dark:text-white">
+            CERTIFICATES
           </h2>
-          <p class="font-sans text-base text-black/70 mt-2 max-w-xl">
-            Industry-recognized certifications validating cloud architecture, frontend mastery, and security compliance.
+          <p class="font-sans text-base text-neutral-600 dark:text-neutral-400 mt-2 max-w-xl">
+            Piagam penghargaan yang di dapat setelah menyelesaikan suatu perlombaan atau event
           </p>
         </div>
 
         <!-- Certificates Grid -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-          <!-- CERT 1 (Article card matching projects article structure & style) -->
-          <article class="scroll-reveal scroll-reveal-scale delay-75 bg-white border-4 border-black shadow-brutal-md flex flex-col justify-between group hover:-translate-y-1 hover:shadow-brutal-lg transition-all duration-200">
+          <!-- ARTICLE 2 (Matched exactly to Article 1) -->
+          <article class="scroll-reveal scroll-reveal-scale delay-75 project-card bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group overflow-hidden" data-category="fullstack" data-id="p1">
             <div>
               <!-- Visual Art Header -->
-              <div class="relative aspect-[16/10] bg-neutral-100 border-b-4 border-black overflow-hidden flex items-center justify-center p-6">
-                <!-- Cert Visual Graphic -->
-                <div class="w-20 h-20 bg-black text-white flex items-center justify-center font-comic text-4xl border-3 border-black shadow-brutal-sm group-hover:scale-105 transition-transform">
-                  ☁️
+              <div class="relative aspect-[16/10] bg-neutral-100 dark:bg-neutral-800 border-b border-neutral-200 dark:border-neutral-800 overflow-hidden group/thumb">
+                <img
+                  id="projectPhoto2"
+                  src="foto/piagam.png"
+                  alt="Piagam Juara Popda"
+                  class="w-full h-full object-cover group-hover/thumb:scale-105 transition-transform duration-500 ease-out"
+                  loading="lazy"
+                />
+                <div class="absolute inset-0 bg-neutral-950/10 pointer-events-none"></div>
+
+                <!-- Badge Tags -->
+                <div class="absolute top-3 left-3 bg-white/95 dark:bg-neutral-900/95 backdrop-blur-xs px-2.5 py-1 rounded-md border border-neutral-200 dark:border-neutral-700 font-mono text-[11px] font-semibold text-neutral-800 dark:text-neutral-200 shadow-sm">
+                  Atletik
                 </div>
-                <!-- Badges -->
-                <div class="absolute top-3 left-3 bg-white px-2 py-0.5 border-2 border-black font-mono text-xs font-bold shadow-brutal-sm">
-                  CLOUD ARCHITECTURE
-                </div>
-                <div class="absolute top-3 right-3 bg-black text-white px-2 py-0.5 font-mono text-xs font-bold">
-                  VALIDATED
+                <div class="absolute top-3 right-3 bg-neutral-900/95 dark:bg-white/95 text-white dark:text-neutral-900 px-2.5 py-1 rounded-md font-mono text-[11px] font-semibold shadow-sm">
+                  Popda 2024
                 </div>
               </div>
 
-              <!-- Card Body Content -->
+              <!-- Card Content -->
               <div class="p-6">
-                <div class="flex items-center gap-2 font-mono text-xs text-black/70 mb-2">
-                  <span>AWS</span>
-                  <span aria-hidden="true">·</span>
-                  <span>Associate</span>
-                  <span aria-hidden="true">·</span>
-                  <span>Issued 2025</span>
-                </div>
-
-                <h3 class="font-comic text-2xl tracking-wide uppercase text-black group-hover:underline decoration-3 underline-offset-4 mb-2">
-                  AWS Solutions Architect
+                <!-- Metadata Separators -->
+                <h3 class="font-sans font-bold text-xl text-neutral-900 dark:text-white group-hover:text-neutral-600 dark:group-hover:text-neutral-300 transition-colors mb-2">
+                  Juara Atletik Lempar Lembing
                 </h3>
                 
-                <p class="font-sans text-sm text-black/80 leading-relaxed mb-4">
-                  High-availability cloud design, VPC networking, serverless compute, and cost optimization across enterprise distributed systems.
+                <p class="font-sans text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed mb-4">
+                 Sukses ikut serta dan Menjuarai ajang perlombaan Pekan Olahraga Pelajar Daerah pada cabor Atletik Lempar lembing putra
                 </p>
               </div>
             </div>
 
             <!-- Card Action Footer -->
-            <div class="p-6 pt-0 border-t-2 border-black/10 mt-2 flex items-center justify-between gap-3">
-              <span class="font-mono text-xs font-bold text-black/60">
-                ID: AWS-SA-849204
-              </span>
-              <div class="flex items-center gap-2">
-                <button type="button" class="cert-photo-view-btn px-3 py-2 font-mono text-xs font-bold bg-black text-white hover:bg-white hover:text-black border-2 border-black shadow-brutal-sm hover:-translate-y-0.5 active:translate-y-0 active:shadow-none transition-all" data-title="AWS Solutions Architect — Associate Credential" data-badge="AWS-SA-849204 · ISSUED 2025" aria-label="Inspect certificate photo">
-                  Inspect ↗
-                </button>
-              </div>
+            <div class="p-6 pt-0 border-t border-neutral-100 dark:border-neutral-800 mt-2 flex items-center justify-between gap-3">
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="font-sans text-xs font-semibold px-4 py-2 bg-neutral-900 text-white dark:bg-white dark:text-neutral-900 hover:bg-neutral-800 rounded-lg shadow-sm hover:shadow transition-all inline-flex items-center gap-1.5" aria-label="Visit CanvasCollab Studio">
+                <span>Explore Live</span>
+                <span aria-hidden="true">↗</span>
+              </a>
             </div>
           </article>
 
@@ -1282,80 +1290,77 @@
     <!-- ========================================== -->
     <!-- SECTION: CONTACT SECTION                   -->
     <!-- ========================================== -->
-    <section id="contact" class="py-16 md:py-24 border-b-4 border-black bg-neutral-50 relative">
+    <section id="contact" class="py-20 md:py-28 border-b border-neutral-200 dark:border-neutral-800 bg-neutral-50/60 dark:bg-neutral-900/30 relative">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <!-- Section Header -->
         <div class="mb-14 scroll-reveal scroll-reveal-left">
-          <div class="inline-block px-3 py-1 bg-black text-white font-mono text-xs font-bold uppercase tracking-widest border-2 border-black shadow-brutal-sm mb-3">
-            CHAPTER 04: TRANSMISSION DESK
-          </div>
-          <h2 class="font-comic text-4xl sm:text-5xl md:text-6xl tracking-wide uppercase text-black leading-none">
-            LET'S BUILD TOGETHER
+          <h2 class="font-sans font-extrabold text-3xl sm:text-4xl md:text-5xl tracking-tight text-neutral-900 dark:text-white">
+            Let's Build Something Great
           </h2>
-          <p class="font-sans text-base text-black/70 mt-2 max-w-xl">
-            Have an open engineering role, a bold product to launch, or want to say hello? Drop a transmission below.
+          <p class="font-sans text-base text-neutral-600 dark:text-neutral-400 mt-2 max-w-xl">
+            Siap Berkontribusi besar dalam menciptakan sebuah perubahan yang sangat bermanfaat untuk masa yang akan datang
           </p>
         </div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
           
           <!-- Left Column: Contact Cards & Direct Info -->
           <div class="lg:col-span-5 space-y-6 scroll-reveal scroll-reveal-left delay-100">
             
-            <div class="bg-white border-4 border-black p-6 sm:p-8 shadow-brutal-md">
-              <div class="inline-block bg-black text-white px-3 py-1 font-mono text-xs font-bold border border-black mb-4">
-                DIRECT CHANNELS
+            <div class="bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-2xl p-6 sm:p-8 shadow-sm">
+              <div class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-neutral-100 text-neutral-800 dark:bg-neutral-800 dark:text-neutral-200 mb-4">
+                Direct Channels
               </div>
 
-              <h3 class="font-comic text-3xl uppercase tracking-wide text-black mb-3">
-                FAST DISPATCH
+              <h3 class="font-sans font-bold text-2xl text-neutral-900 dark:text-white mb-2">
+                Fast Dispatch
               </h3>
               
-              <p class="font-sans text-sm text-black/80 leading-relaxed mb-6">
+              <p class="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed mb-6">
                 I am currently open to full-time Software Engineer positions, contract product engineering, and high-impact advisory work.
               </p>
 
               <!-- Email with Quick Copy -->
-              <div class="p-4 bg-neutral-50 border-3 border-black shadow-brutal-sm mb-4">
-                <div class="font-mono text-xs font-bold uppercase text-black/60 mb-1">DIRECT EMAIL</div>
+              <div class="p-4 rounded-xl bg-neutral-50 dark:bg-neutral-800/60 border border-neutral-200 dark:border-neutral-700/80 mb-5">
+                <div class="text-[11px] font-bold uppercase tracking-wider text-neutral-400 dark:text-neutral-500 mb-1">Direct Email</div>
                 <div class="flex items-center justify-between gap-2">
-                  <span id="contactEmail" class="font-mono text-sm sm:text-base font-bold select-all truncate">
-                    yanzserfot0@gmail.com
+                  <span id="contactEmail" class="font-mono text-sm font-semibold text-neutral-900 dark:text-white select-all truncate">
+                    yanzserfort0@gmail.com
                   </span>
-                  <button id="copyEmailBtn" type="button" class="px-3 py-1.5 bg-black text-white font-mono text-xs font-bold uppercase border border-black shadow-brutal-sm hover:bg-neutral-800 active:translate-x-0.5 active:translate-y-0.5 active:shadow-none transition-all shrink-0">
+                  <button id="copyEmailBtn" type="button" class="px-3.5 py-1.5 rounded-lg bg-neutral-900 text-white dark:bg-white dark:text-neutral-900 hover:bg-neutral-800 dark:hover:bg-neutral-100 text-xs font-semibold transition-all shrink-0 cursor-pointer">
                     Copy 📋
                   </button>
                 </div>
               </div>
 
               <!-- Location & Response Stats -->
-              <div class="space-y-3 font-mono text-xs font-bold text-black/80">
-                <div class="flex items-center justify-between p-2.5 bg-neutral-50 border-2 border-black">
-                  <span>📍 LOCATION:</span>
-                  <span>Jepara, West Java [Indonesia]</span>
+              <div class="space-y-2.5 text-xs text-neutral-700 dark:text-neutral-300">
+                <div class="flex items-center justify-between p-3 rounded-lg bg-neutral-50 dark:bg-neutral-800/40 border border-neutral-200/80 dark:border-neutral-700/60">
+                  <span class="font-medium text-neutral-500 dark:text-neutral-400">📍 Location:</span>
+                  <span class="font-semibold text-neutral-900 dark:text-white">Jepara, East Java(Indonesia)</span>
                 </div>
-                <div class="flex items-center justify-between p-2.5 bg-neutral-50 border-2 border-black">
-                  <span>⏱️ TYPICAL RESPONSE:</span>
-                  <span>&lt; 24 Hours</span>
+                <div class="flex items-center justify-between p-3 rounded-lg bg-neutral-50 dark:bg-neutral-800/40 border border-neutral-200/80 dark:border-neutral-700/60">
+                  <span class="font-medium text-neutral-500 dark:text-neutral-400">⏱️ Response:</span>
+                  <span class="font-semibold text-neutral-900 dark:text-white">&lt; 24 Hours</span>
                 </div>
-                <div class="flex items-center justify-between p-2.5 bg-neutral-50 border-2 border-black">
-                  <span>💼 CURRENT STATUS:</span>
-                  <span class="text-black font-extrabold">Open For collaboration</span>
+                <div class="flex items-center justify-between p-3 rounded-lg bg-neutral-50 dark:bg-neutral-800/40 border border-neutral-200/80 dark:border-neutral-700/60">
+                  <span class="font-medium text-neutral-500 dark:text-neutral-400">💼 Availability:</span>
+                  <span class="font-semibold text-emerald-600 dark:text-emerald-400">Open for collaboration</span>
                 </div>
               </div>
 
-              <!-- Social Links Comic Strip -->
-              <div class="mt-6 pt-6 border-t-2 border-black/10">
-                <div class="font-mono text-xs font-bold uppercase text-black/60 mb-3">NETWORK LINKS:</div>
+              <!-- Social Links -->
+              <div class="mt-6 pt-6 border-t border-neutral-100 dark:border-neutral-800">
+                <div class="text-[11px] font-bold uppercase tracking-wider text-neutral-400 dark:text-neutral-500 mb-3">Connect Online:</div>
                 <div class="flex flex-wrap items-center gap-2">
-                  <a href="https://github.com/iyanyeager" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 bg-white hover:bg-black hover:text-white border-2 border-black font-mono text-xs font-bold shadow-brutal-sm transition-colors">
+                  <a href="https://github.com/yanyeager" target="_blank" rel="noopener noreferrer" class="px-3.5 py-1.5 rounded-lg bg-neutral-100 hover:bg-neutral-900 hover:text-white dark:bg-neutral-800 dark:hover:bg-white dark:hover:text-neutral-900 border border-neutral-200 dark:border-neutral-700 text-xs font-semibold text-neutral-700 dark:text-neutral-300 transition-colors">
                     GitHub ↗
                   </a>
-                  <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 bg-white hover:bg-black hover:text-white border-2 border-black font-mono text-xs font-bold shadow-brutal-sm transition-colors">
+                  <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="px-3.5 py-1.5 rounded-lg bg-neutral-100 hover:bg-neutral-900 hover:text-white dark:bg-neutral-800 dark:hover:bg-white dark:hover:text-neutral-900 border border-neutral-200 dark:border-neutral-700 text-xs font-semibold text-neutral-700 dark:text-neutral-300 transition-colors">
                     LinkedIn ↗
                   </a>
-                  <a href="https://instagram.com/yanradty_" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 bg-white hover:bg-black hover:text-white border-2 border-black font-mono text-xs font-bold shadow-brutal-sm transition-colors">
+                  <a href="https://instagram.com/yanradty_" target="_blank" rel="noopener noreferrer" class="px-3.5 py-1.5 rounded-lg bg-neutral-100 hover:bg-neutral-900 hover:text-white dark:bg-neutral-800 dark:hover:bg-white dark:hover:text-neutral-900 border border-neutral-200 dark:border-neutral-700 text-xs font-semibold text-neutral-700 dark:text-neutral-300 transition-colors">
                     Instagram ↗
                   </a>
                 </div>
@@ -1365,71 +1370,73 @@
 
           </div>
 
-          <!-- Right Column: Interactive Comic Contact Form -->
+          <!-- Right Column: Interactive Clean Contact Form -->
           <div class="lg:col-span-7 scroll-reveal scroll-reveal-right delay-200">
-            <div class="bg-white border-4 border-black p-6 sm:p-8 shadow-brutal-lg">
+            <div class="bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-2xl p-6 sm:p-8 shadow-sm">
               
-              <div class="flex items-center justify-between mb-6 pb-4 border-b-2 border-black">
+              <div class="flex items-center justify-between mb-6 pb-4 border-b border-neutral-100 dark:border-neutral-800">
                 <div>
-                  <h3 class="font-comic text-2xl sm:text-3xl uppercase tracking-wide">
-                    DISPATCH TRANSMISSION
+                  <h3 class="font-sans font-bold text-2xl text-neutral-900 dark:text-white">
+                    Send a Message
                   </h3>
-                  <p class="font-mono text-xs text-black/70">
-                    FILL OUT THE FIELDS BELOW TO TRANSMIT
+                  <p class="text-xs text-neutral-500 dark:text-neutral-400 mt-0.5">
+                    Fill out the form below and I will get back to you promptly.
                   </p>
                 </div>
-                <span class="text-3xl">🚀</span>
+                <div class="w-10 h-10 rounded-xl bg-neutral-100 dark:bg-neutral-800 flex items-center justify-center text-xl">
+                  ✉️
+                </div>
               </div>
 
-              <form id="contactForm" class="space-y-5" novalidate>
+              <form id="contactForm" class="space-y-4" novalidate>
                 
                 <!-- Name Field -->
                 <div>
-                  <label for="userName" class="block font-mono text-xs font-bold uppercase tracking-wider text-black mb-2">
-                    01. Your Name / Alias <span class="text-black font-extrabold">*</span>
+                  <label for="userName" class="block text-xs font-bold uppercase tracking-wider text-neutral-700 dark:text-neutral-300 mb-1.5">
+                    Your Name <span class="text-red-500">*</span>
                   </label>
-                  <input type="text" id="userName" name="userName" required placeholder="e.g. Sarah Connor" class="w-full px-4 py-3 bg-neutral-50 border-3 border-black font-sans text-sm font-medium placeholder:text-black/40 shadow-brutal-sm focus:bg-white focus:shadow-brutal transition-all" />
-                  <p id="nameError" class="hidden text-xs font-mono font-bold text-black bg-neutral-100 p-1 mt-1.5 border border-black"></p>
+                  <input type="text" id="userName" name="userName" required placeholder="Julian Khasiib Raditya" class="w-full px-4 py-3 rounded-xl bg-neutral-50 dark:bg-neutral-800/60 border border-neutral-200 dark:border-neutral-700 font-sans text-sm text-neutral-900 dark:text-white placeholder:text-neutral-400 focus:bg-white dark:focus:bg-neutral-800 focus:ring-2 focus:ring-neutral-900 dark:focus:ring-white focus:border-transparent outline-none transition-all" />
+                  <p id="nameError" class="hidden text-xs text-red-500 font-medium mt-1"></p>
                 </div>
 
                 <!-- Email Field -->
                 <div>
-                  <label for="userEmail" class="block font-mono text-xs font-bold uppercase tracking-wider text-black mb-2">
-                    02. Your Email Address <span class="text-black font-extrabold">*</span>
+                  <label for="userEmail" class="block text-xs font-bold uppercase tracking-wider text-neutral-700 dark:text-neutral-300 mb-1.5">
+                    Your Email Address <span class="text-red-500">*</span>
                   </label>
-                  <input type="email" id="userEmail" name="userEmail" required placeholder="e.g. sarah@cyberdyne.io" class="w-full px-4 py-3 bg-neutral-50 border-3 border-black font-sans text-sm font-medium placeholder:text-black/40 shadow-brutal-sm focus:bg-white focus:shadow-brutal transition-all" />
-                  <p id="emailError" class="hidden text-xs font-mono font-bold text-black bg-neutral-100 p-1 mt-1.5 border border-black"></p>
+                  <input type="email" id="userEmail" name="userEmail" required placeholder="yanzserfort0@gmail.com" class="w-full px-4 py-3 rounded-xl bg-neutral-50 dark:bg-neutral-800/60 border border-neutral-200 dark:border-neutral-700 font-sans text-sm text-neutral-900 dark:text-white placeholder:text-neutral-400 focus:bg-white dark:focus:bg-neutral-800 focus:ring-2 focus:ring-neutral-900 dark:focus:ring-white focus:border-transparent outline-none transition-all" />
+                  <p id="emailError" class="hidden text-xs text-red-500 font-medium mt-1"></p>
                 </div>
 
                 <!-- Subject Field -->
                 <div>
-                  <label for="userSubject" class="block font-mono text-xs font-bold uppercase tracking-wider text-black mb-2">
-                    03. Transmission Topic
+                  <label for="userSubject" class="block text-xs font-bold uppercase tracking-wider text-neutral-700 dark:text-neutral-300 mb-1.5">
+                    Subject / Discussion Topic
                   </label>
-                  <select id="userSubject" name="userSubject" class="w-full px-4 py-3 bg-neutral-50 border-3 border-black font-mono text-xs font-bold uppercase shadow-brutal-sm focus:bg-white focus:shadow-brutal transition-all">
+                  <select id="userSubject" name="userSubject" class="w-full px-4 py-3 rounded-xl bg-neutral-50 dark:bg-neutral-800/60 border border-neutral-200 dark:border-neutral-700 font-sans text-sm font-medium text-neutral-800 dark:text-neutral-200 focus:bg-white dark:focus:bg-neutral-800 focus:ring-2 focus:ring-neutral-900 dark:focus:ring-white focus:border-transparent outline-none transition-all cursor-pointer">
                     <option value="Full-Time Engineering Role">Full-Time Engineering Role</option>
                     <option value="Contract / Freelance Project">Contract / Freelance Project</option>
-                    <option value="Consulting & Technical Advisory">Consulting & Technical Advisory</option>
+                    <option value="Consulting & Technical Advisory">Consulting &amp; Technical Advisory</option>
                     <option value="Casual Technical Chat">Casual Technical Chat / Mentorship</option>
                   </select>
                 </div>
 
                 <!-- Message Field -->
                 <div>
-                  <label for="userMessage" class="block font-mono text-xs font-bold uppercase tracking-wider text-black mb-2">
-                    04. Message Body <span class="text-black font-extrabold">*</span>
+                  <label for="userMessage" class="block text-xs font-bold uppercase tracking-wider text-neutral-700 dark:text-neutral-300 mb-1.5">
+                    Message Body <span class="text-red-500">*</span>
                   </label>
-                  <textarea id="userMessage" name="userMessage" rows="5" required placeholder="Tell me about your project, timeline, and what we can create together..." class="w-full px-4 py-3 bg-neutral-50 border-3 border-black font-sans text-sm font-medium placeholder:text-black/40 shadow-brutal-sm focus:bg-white focus:shadow-brutal transition-all resize-y"></textarea>
-                  <p id="messageError" class="hidden text-xs font-mono font-bold text-black bg-neutral-100 p-1 mt-1.5 border border-black"></p>
+                  <textarea id="userMessage" name="userMessage" rows="4" required placeholder="Halo Iyan, saya suka berbicara tentang mu untuk membahas perubahan yang besar bagi masa yang akan datang..." class="w-full px-4 py-3 rounded-xl bg-neutral-50 dark:bg-neutral-800/60 border border-neutral-200 dark:border-neutral-700 font-sans text-sm text-neutral-900 dark:text-white placeholder:text-neutral-400 focus:bg-white dark:focus:bg-neutral-800 focus:ring-2 focus:ring-neutral-900 dark:focus:ring-white focus:border-transparent outline-none transition-all resize-y"></textarea>
+                  <p id="messageError" class="hidden text-xs text-red-500 font-medium mt-1"></p>
                 </div>
 
                 <!-- Form Submit Button -->
                 <div class="pt-2 flex flex-col sm:flex-row items-center justify-between gap-4">
-                  <button type="submit" id="submitFormBtn" class="w-full sm:w-auto px-8 py-3.5 bg-black text-white font-mono text-sm font-extrabold uppercase tracking-wider border-3 border-black shadow-brutal-md hover:bg-white hover:text-black hover:shadow-brutal-lg active:translate-x-1 active:translate-y-1 active:shadow-none transition-all">
-                    TRANSMIT MESSAGE ⚡
+                  <button type="submit" id="submitFormBtn" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-neutral-900 text-white hover:bg-neutral-800 dark:bg-white dark:text-neutral-900 dark:hover:bg-neutral-100 font-sans text-sm font-bold tracking-wide transition-all shadow-sm hover:shadow active:scale-[0.99] cursor-pointer">
+                    Send Message
                   </button>
-                  <span class="font-mono text-xs text-black/60 text-center sm:text-right">
-                    Zero spam. Human reply guaranteed.
+                  <span class="text-xs text-neutral-500 dark:text-neutral-400 text-center sm:text-right">
+                    Online
                   </span>
                 </div>
 
@@ -1448,193 +1455,57 @@
   <!-- ========================================== -->
   <!-- SECTION: FOOTER SECTION                    -->
   <!-- ========================================== -->
-  <footer class="bg-black text-white border-t-4 border-black py-12 relative overflow-hidden">
+  <footer class="bg-neutral-950 text-white border-t border-neutral-800 py-14 relative overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-8 pb-10 border-b-2 border-white/20">
+      <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-8 pb-10 border-b border-neutral-800">
         
         <!-- Brand & Tagline -->
         <div>
           <div class="flex items-center gap-3 mb-2">
-            <div class="w-10 h-10 bg-white text-black font-comic text-2xl flex items-center justify-center border-2 border-white">
+            <div class="w-9 h-9 rounded-xl bg-white text-neutral-950 font-sans font-black text-sm flex items-center justify-center">
               YN
             </div>
-            <span class="font-comic text-3xl tracking-wide">Julian Raditya</span>
+            <span class="font-sans font-bold text-2xl tracking-tight text-white">Yan Raditya</span>
           </div>
-          <p class="font-mono text-xs text-white/70 max-w-md">
-            Full-Stack Software Engineer & Creative Technologist. Building the web with uncompromising craftsmanship, zero slop, and comic joy.
+          <p class="text-xs text-neutral-400 max-w-md leading-relaxed">
+            Full-Stack Software Engineer &amp; Creative Technologist. Dedicated to clean architecture, high performance, and thoughtful user experiences.
           </p>
         </div>
 
         <!-- Footer Navigation Links -->
-        <div class="flex flex-wrap items-center gap-6 font-mono text-xs font-bold uppercase tracking-wider text-white/90">
-          <a href="#hero" class="hover:underline underline-offset-4 decoration-2">Home</a>
-          <a href="#projects" class="hover:underline underline-offset-4 decoration-2">Projects</a>
-          <a href="#skills" class="hover:underline underline-offset-4 decoration-2">Skills</a>
-          <a href="#education" class="hover:underline underline-offset-4 decoration-2">Education</a>
-          <a href="#certificates" class="hover:underline underline-offset-4 decoration-2">Certs</a>
-          <a href="#contact" class="hover:underline underline-offset-4 decoration-2">Contact</a>
+        <div class="flex flex-wrap items-center gap-6 text-xs font-semibold uppercase tracking-wider text-neutral-400">
+          <a href="#hero" class="hover:text-white transition-colors">Home</a>
+          <a href="#projects" class="hover:text-white transition-colors">Projects</a>
+          <a href="#skills" class="hover:text-white transition-colors">Skills</a>
+          <a href="#education" class="hover:text-white transition-colors">Education</a>
+          <a href="#certificates" class="hover:text-white transition-colors">Certs</a>
+          <a href="#contact" class="hover:text-white transition-colors">Contact</a>
         </div>
 
         <!-- Back to Top Button -->
-        <button id="backToTopBtn" type="button" aria-label="Back to top of page" class="px-4 py-2.5 bg-white text-black font-mono text-xs font-bold uppercase tracking-wider border-2 border-white shadow-brutal-white hover:bg-black hover:text-white active:translate-x-0.5 active:translate-y-0.5 transition-all">
-          Top ↑
+        <button id="backToTopBtn" type="button" aria-label="Back to top of page" class="px-4 py-2.5 rounded-xl bg-neutral-900 hover:bg-neutral-800 text-white text-xs font-semibold border border-neutral-800 transition-colors cursor-pointer flex items-center gap-1.5">
+          <span>Kembali ke Atas</span>
+          <span>↑</span>
         </button>
 
       </div>
 
-      <!-- Copyright & Comic Stamp -->
-      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 font-mono text-xs text-white/70">
+      <!-- Copyright & Info -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-neutral-500">
         <div>
-          © 2026 JULIAN RADITYA. HAND-CRAFTED WITH INK &amp; CODE.
+          © 2026 Yan Raditya. All rights reserved.
         </div>
-        <div class="flex items-center gap-3">
-          <span>VANILLA JS</span>
+        <div class="flex items-center gap-3 font-mono text-[11px]">
+          <span>HTML%</span>
           <span aria-hidden="true">·</span>
-          <span>TAILWIND CSS</span>
+          <span>Tailwind CSS</span>
           <span aria-hidden="true">·</span>
-          <span>NEO-BRUTALIST COMIC V1.0</span>
+          <span>Modern Portfolio</span>
         </div>
       </div>
 
     </div>
-  </footer>
-
-  <!-- ========================================== -->
-  <!-- MODAL: CERTIFICATE VERIFICATION            -->
-  <!-- ========================================== -->
-  <div id="certModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 sm:p-6 bg-black/80 backdrop-blur-xs transition-opacity duration-200" role="dialog" aria-modal="true" aria-labelledby="certModalTitle">
-    <div id="certModalCard" class="bg-white border-4 border-black shadow-brutal-xl w-full max-w-lg p-6 sm:p-8 relative">
-      
-      <button id="certModalCloseBtn" type="button" aria-label="Close certificate verification" class="absolute top-4 right-4 p-2 bg-black text-white hover:bg-neutral-800 font-mono text-xs font-bold border-2 border-black active:translate-x-0.5 active:translate-y-0.5 transition-all">
-        ✕
-      </button>
-
-      <div class="inline-block px-3 py-1 bg-black text-white font-mono text-xs font-bold uppercase tracking-widest border border-black mb-3">
-        CREDENTIAL RECORD
-      </div>
-
-      <h3 id="certModalTitle" class="font-comic text-3xl uppercase tracking-wide text-black mb-2">
-        Certificate Title
-      </h3>
-
-      <div class="p-4 bg-neutral-100 border-2 border-black my-4 space-y-2 font-mono text-xs">
-        <div><span class="text-black/60">ISSUER:</span> <strong id="certModalIssuer">Organization</strong></div>
-        <div><span class="text-black/60">RECORD IDENTIFIER:</span> <strong id="certModalID">ID-12345</strong></div>
-        <div><span class="text-black/60">STATUS:</span> <strong class="text-black">ACTIVE &amp; VERIFIED IN REGISTRY</strong></div>
-      </div>
-
-      <button id="certModalDismissBtn" type="button" class="w-full py-2.5 bg-black text-white font-mono text-xs font-bold uppercase border-2 border-black shadow-brutal-sm hover:bg-neutral-800 transition-all">
-        Close Credential Viewer ✓
-      </button>
-
-    </div>
-  </div>
-
-  <!-- ========================================== -->
-  <!-- MODAL: CERTIFICATE PHOTO VIEWER            -->
-  <!-- ========================================== -->
-  <div id="certPhotoModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 sm:p-6 bg-black/85 backdrop-blur-xs transition-opacity duration-200" role="dialog" aria-modal="true" aria-labelledby="certPhotoModalTitle">
-    <div id="certPhotoModalCard" class="bg-white border-4 border-black shadow-brutal-xl w-full max-w-3xl max-h-[92vh] overflow-y-auto p-4 sm:p-6 relative flex flex-col">
-      
-      <!-- Close Button -->
-      <button id="certPhotoModalCloseBtn" type="button" aria-label="Close certificate photo viewer" class="absolute top-4 right-4 z-10 px-3 py-1.5 bg-black text-white hover:bg-white hover:text-black font-mono text-xs font-bold border-2 border-black active:translate-x-0.5 active:translate-y-0.5 transition-all cursor-pointer">
-        ✕ CLOSE [ESC]
-      </button>
-
-      <!-- Top Bar Badge -->
-      <div class="flex items-center gap-2 mb-3">
-        <span class="inline-block px-3 py-1 bg-black text-white font-mono text-xs font-bold uppercase tracking-widest border border-black">
-          CERTIFICATE PHOTO PREVIEW
-        </span>
-        <span id="certPhotoBadge" class="hidden sm:inline-block font-mono text-xs font-bold bg-neutral-100 px-2 py-1 border border-black">
-          AWS-SA-849204 · ISSUED 2025
-        </span>
-      </div>
-
-      <!-- Title -->
-      <h3 id="certPhotoModalTitle" class="font-comic text-2xl sm:text-3xl uppercase tracking-wide text-black mb-3 pr-24">
-        AWS Solutions Architect — Associate Credential
-      </h3>
-
-      <!-- Certificate Photo Container -->
-      <div class="relative w-full aspect-[4/3] sm:aspect-[16/10] bg-neutral-900 border-4 border-black shadow-brutal overflow-hidden flex items-center justify-center group mb-4">
-        <!-- SVG Certificate Graphic / Photo -->
-        <svg id="certPhotoSvg" viewBox="0 0 800 500" class="w-full h-full object-contain" xmlns="http://www.w3.org/2000/svg">
-          <!-- Background Diploma Parchment -->
-          <rect width="800" height="500" fill="#fdfbf7"/>
-          <rect x="20" y="20" width="760" height="460" fill="none" stroke="#000000" stroke-width="6"/>
-          <rect x="30" y="30" width="740" height="440" fill="none" stroke="#000000" stroke-width="2" stroke-dasharray="8 4"/>
-          
-          <!-- Ornate Corner Accents -->
-          <path d="M40 70 L40 40 L70 40" stroke="#000000" stroke-width="4" fill="none"/>
-          <path d="M760 70 L760 40 L730 40" stroke="#000000" stroke-width="4" fill="none"/>
-          <path d="M40 430 L40 460 L70 460" stroke="#000000" stroke-width="4" fill="none"/>
-          <path d="M760 430 L760 460 L730 460" stroke="#000000" stroke-width="4" fill="none"/>
-
-          <!-- Cloud Provider Seal / Emblem -->
-          <circle cx="400" cy="115" r="42" fill="#000000"/>
-          <circle cx="400" cy="115" r="36" fill="#fdfbf7" stroke="#000000" stroke-width="2"/>
-          <text x="400" y="128" font-size="34" text-anchor="middle" font-family="monospace">☁️</text>
-
-          <!-- Issuer Header -->
-          <text x="400" y="185" font-family="'Space Grotesk', sans-serif" font-weight="900" font-size="20" text-anchor="middle" letter-spacing="4" fill="#000000">AMAZON WEB SERVICES</text>
-          <text x="400" y="208" font-family="'Courier New', monospace" font-size="12" text-anchor="middle" letter-spacing="2" fill="#555555">TRAINING AND CERTIFICATION REGISTRY</text>
-          
-          <!-- Line Separator -->
-          <line x1="280" y1="222" x2="520" y2="222" stroke="#000000" stroke-width="2"/>
-
-          <text x="400" y="250" font-family="'Courier New', monospace" font-size="13" text-anchor="middle" letter-spacing="1" fill="#333333">THIS IS TO CERTIFY THAT</text>
-
-          <!-- Candidate Recipient Name -->
-          <text x="400" y="295" font-family="'Bangers', 'Comic Sans MS', cursive" font-size="44" text-anchor="middle" letter-spacing="2" fill="#000000">ALEX CARTER</text>
-
-          <!-- Achievement -->
-          <text x="400" y="330" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="16" text-anchor="middle" fill="#000000">HAS SUCCESSFULLY COMPLETED ALL FORMAL CRITERIA FOR</text>
-
-          <text x="400" y="365" font-family="'Bangers', 'Comic Sans MS', cursive" font-size="28" text-anchor="middle" letter-spacing="1.5" fill="#000000">AWS CERTIFIED SOLUTIONS ARCHITECT — ASSOCIATE</text>
-
-          <!-- Verification Details & Gold Star Stamp -->
-          <g transform="translate(620, 370)">
-            <circle cx="40" cy="40" r="35" fill="#000000"/>
-            <circle cx="40" cy="40" r="31" fill="#fdfbf7" stroke="#000000" stroke-width="2"/>
-            <polygon points="40,15 47,30 63,31 51,43 55,59 40,50 25,59 29,43 17,31 33,30" fill="#000000"/>
-          </g>
-
-          <text x="120" y="425" font-family="'Courier New', monospace" font-size="11" fill="#333333">VALIDATION NUMBER: AWS-SA-849204</text>
-          <text x="120" y="442" font-family="'Courier New', monospace" font-size="11" fill="#333333">ISSUE DATE: 15 JANUARY 2025</text>
-          <line x1="120" y1="410" x2="280" y2="410" stroke="#000000" stroke-width="1.5"/>
-
-          <line x1="430" y1="428" x2="570" y2="428" stroke="#000000" stroke-width="1.5"/>
-          <text x="500" y="445" font-family="'Courier New', monospace" font-size="10" text-anchor="middle" fill="#333333">GLOBAL VP OF CERTIFICATION</text>
-        </svg>
-
-        <!-- Watermark Badge Overlay -->
-        <div class="absolute bottom-3 left-3 bg-white/95 px-2.5 py-1 border-2 border-black font-mono text-[11px] font-bold shadow-brutal-sm">
-          ORIGINAL HIGH-RES CREDENTIAL PHOTO
-        </div>
-      </div>
-
-      <!-- Modal Footer -->
-      <div class="flex flex-wrap items-center justify-between gap-3 pt-2 border-t-2 border-black/10 font-mono text-xs">
-        <span class="text-black/70">
-          Status: <strong class="text-black">100% Verified Authentic</strong>
-        </span>
-        <button id="certPhotoModalDismissBtn" type="button" class="px-5 py-2 bg-black text-white hover:bg-neutral-800 font-bold uppercase border-2 border-black shadow-brutal-sm active:translate-x-0.5 active:translate-y-0.5 transition-all cursor-pointer">
-          Tutup Foto ✓
-        </button>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- ========================================== -->
-  <!-- FLOATING BACK TO TOP BUTTON (SCROLL-DOWN)  -->
-  <!-- ========================================== -->
-  <button id="floatingTopBtn" type="button" aria-label="Scroll back to top of page" class="fixed bottom-6 left-6 z-40 px-3.5 py-2.5 bg-black text-white font-mono text-xs font-bold uppercase border-3 border-black shadow-brutal hover:bg-white hover:text-black hover:shadow-brutal-md active:translate-x-1 active:translate-y-1 transition-all flex items-center gap-2 group cursor-pointer">
-    <span class="text-base font-comic group-hover:-translate-y-1 transition-transform">↑</span>
-    <span class="font-bold tracking-wider">TOP</span>
-  </button>
 
   <!-- ========================================== -->
   <!-- TOAST NOTIFICATION CONTAINER               -->
@@ -1664,48 +1535,8 @@
       return audioCtx;
     }
 
-    function playComicSound(type = 'pop') {
-      if (!soundEnabled) return;
-      try {
-        const ctx = getAudioContext();
-        if (!ctx) return;
-
-        const osc = ctx.createOscillator();
-        const gain = ctx.createGain();
-        osc.connect(gain);
-        gain.connect(ctx.destination);
-
-        const now = ctx.currentTime;
-
-        if (type === 'pop') {
-          osc.type = 'triangle';
-          osc.frequency.setValueAtTime(320, now);
-          osc.frequency.exponentialRampToValueAtTime(780, now + 0.08);
-          gain.gain.setValueAtTime(0.12, now);
-          gain.gain.exponentialRampToValueAtTime(0.001, now + 0.08);
-          osc.start(now);
-          osc.stop(now + 0.08);
-        } else if (type === 'zap') {
-          osc.type = 'sawtooth';
-          osc.frequency.setValueAtTime(800, now);
-          osc.frequency.exponentialRampToValueAtTime(200, now + 0.12);
-          gain.gain.setValueAtTime(0.15, now);
-          gain.gain.exponentialRampToValueAtTime(0.001, now + 0.12);
-          osc.start(now);
-          osc.stop(now + 0.12);
-        } else if (type === 'success') {
-          osc.type = 'sine';
-          osc.frequency.setValueAtTime(440, now);
-          osc.frequency.setValueAtTime(554.37, now + 0.08);
-          osc.frequency.setValueAtTime(659.25, now + 0.16);
-          gain.gain.setValueAtTime(0.15, now);
-          gain.gain.exponentialRampToValueAtTime(0.001, now + 0.3);
-          osc.start(now);
-          osc.stop(now + 0.3);
-        }
-      } catch (e) {
-        // Fallback silently if audio context is blocked
-      }
+    function playComicSound() {
+      // Audio synth disabled for clean, non-intrusive modern UX
     }
 
     // Toggle Sound Button
@@ -1718,12 +1549,10 @@
       const icon = soundEnabled ? '🔊' : '🔇';
       if (soundIcon) soundIcon.textContent = icon;
       if (mobileSoundIcon) mobileSoundIcon.textContent = icon;
-      showToast(soundEnabled ? 'Comic Audio Enabled! 🔊' : 'Comic Audio Muted 🔇');
     }
 
     function toggleSound() {
       soundEnabled = !soundEnabled;
-      if (soundEnabled) playComicSound('pop');
       updateSoundUI();
     }
 
@@ -1743,7 +1572,7 @@
 
     function updateThemeUI(isDark) {
       const icon = isDark ? '☀️' : '🌙';
-      const label = isDark ? 'Light Mode' : 'Dark Mode';
+      const label = isDark ? 'Mode Terang' : 'Mode Gelap';
       const title = isDark ? 'Ganti ke Mode Terang (Light)' : 'Ganti ke Mode Gelap (Dark)';
 
       if (themeIcon) themeIcon.textContent = icon;
@@ -1768,8 +1597,7 @@
       } catch (e) {}
 
       if (notify) {
-        playComicSound('pop');
-        showToast(isDark ? 'Mode Gelap Aktif! 🌙 (Manga Noir)' : 'Mode Terang Aktif! ☀️ (Comic Classic)');
+        showToast(isDark ? 'Mode Gelap Aktif 🌙' : 'Mode Terang Aktif ☀️');
       }
     }
 
@@ -1784,30 +1612,6 @@
 
     // Sync initial state
     updateThemeUI(document.documentElement.classList.contains('dark'));
-
-    // ==========================================
-    // JS: COMIC POP PARTICLE GENERATOR ON CLICKS
-    // ==========================================
-    const comicWords = ['POW!', 'BAM!', 'CLICK!', 'ZAP!', 'YEAH!', 'BOOM!', 'CODE!'];
-    document.addEventListener('click', (e) => {
-      // Trigger comic sound for buttons and links
-      const targetInteractive = e.target.closest('button, a, .skill-badge-item, #avatarCard');
-      if (targetInteractive) {
-        playComicSound('pop');
-
-        // Create comic sticker word at click position
-        const word = comicWords[Math.floor(Math.random() * comicWords.length)];
-        const rot = Math.floor(Math.random() * 30) - 15;
-        const pop = document.createElement('div');
-        pop.className = 'comic-pop-particle font-comic text-base sm:text-xl font-bold bg-white text-black border-2 border-black px-2 py-0.5 shadow-brutal-sm';
-        pop.style.left = `${e.clientX}px`;
-        pop.style.top = `${e.clientY}px`;
-        pop.style.setProperty('--rot', `${rot}deg`);
-        pop.textContent = word;
-        document.body.appendChild(pop);
-        setTimeout(() => pop.remove(), 750);
-      }
-    });
 
     // ==========================================
     // JS: HAMBURGER MENU (MOBILE NAVIGATION)
@@ -1867,11 +1671,10 @@
 
     const defaultPhotoSrc = '/src/assets/images/profile_photo_card_1791587378751.jpg';
     const photoQuotes = [
-      '"Foto profil siap untuk berkolaborasi!"',
-      '"Full-Stack Engineer berdedikasi tinggi!"',
-      '"Zero console errors, 100% test coverage!"',
-      '"Siap mengubah ide kreatif menjadi kode nyata!"',
-      '"Desain komik hitam-putih tanpa kompromi!"'
+      '"Full-Stack Software Engineer & Creative Technologist."',
+      '"Specialized in TypeScript, Node.js, and modern UI engineering."',
+      '"Clean architecture, zero memory leaks, and high performance."',
+      '"Open for full-time engineering roles and collaborative projects."'
     ];
     let photoQuoteIndex = 0;
 
@@ -1908,7 +1711,7 @@
           }
           if (resetPhotoBtn) resetPhotoBtn.classList.remove('hidden');
           playComicSound('success');
-          showToast('Foto kamu berhasil dipasang ke kartu! 📸✨');
+          showToast('Foto profil berhasil diperbarui! 📸');
           if (photoCardStatusText) {
             photoCardStatusText.textContent = '"Foto kustom aktif! Siap berkarya!"';
           }
@@ -1927,49 +1730,91 @@
         } catch (e) {}
         resetPhotoBtn.classList.add('hidden');
         if (photoUploadInput) photoUploadInput.value = '';
-        playComicSound('pop');
-        showToast('Foto dikembalikan ke foto bawaan 🔄');
+        showToast('Foto profil dikembalikan ke default 🔄');
         if (photoCardStatusText) {
           photoCardStatusText.textContent = '"Foto default dipulihkan!"';
         }
       });
     }
 
-    // Filter Toggle Cycle: B&W Comic -> Noir High-Contrast -> Normal Asli
-    let currentFilterMode = 0; // 0 = B&W Comic, 1 = Noir, 2 = Normal Asli
+    // ==========================================
+    // JS: CUSTOM BRAND LOGO (TANPA KONTAINER)
+    // ==========================================
+    const siteBrandLogo = document.getElementById('siteBrandLogo');
+    const brandLogoUploadInput = document.getElementById('brandLogoUploadInput');
+
+    try {
+      const savedLogo = localStorage.getItem('userCustomBrandLogo');
+      if (savedLogo && siteBrandLogo) {
+        siteBrandLogo.src = savedLogo;
+      }
+    } catch (e) {}
+
+    if (siteBrandLogo && brandLogoUploadInput) {
+      siteBrandLogo.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        brandLogoUploadInput.click();
+      });
+
+      brandLogoUploadInput.addEventListener('change', (e) => {
+        const file = e.target.files && e.target.files[0];
+        if (!file) return;
+
+        if (!file.type.startsWith('image/')) {
+          showToast('Harap pilih file gambar (PNG, SVG, JPG, WebP)!');
+          return;
+        }
+
+        const reader = new FileReader();
+        reader.onload = (uploadEvent) => {
+          if (siteBrandLogo) {
+            siteBrandLogo.src = uploadEvent.target.result;
+          }
+          try {
+            localStorage.setItem('userCustomBrandLogo', uploadEvent.target.result);
+          } catch (err) {}
+          showToast('Logo brand kustom berhasil dipasang! ✨');
+        };
+        reader.readAsDataURL(file);
+      });
+    }
+
+    // Filter Toggle Cycle: Monochrome -> High Contrast -> Original Color
+    let currentFilterMode = 0; // 0 = Monokrom, 1 = Kontras, 2 = Warna Asli
     if (toggleFilterBtn && profilePhotoImg) {
       toggleFilterBtn.addEventListener('click', (e) => {
         e.stopPropagation();
         currentFilterMode = (currentFilterMode + 1) % 3;
-        playComicSound('pop');
 
         if (currentFilterMode === 0) {
-          // B&W Comic (Default)
-          profilePhotoImg.className = 'w-full h-full object-cover object-center grayscale contrast-125 transition-all duration-300 group-hover/photo:scale-105';
-          if (photoHalftoneOverlay) photoHalftoneOverlay.style.opacity = '0.3';
-          toggleFilterBtn.textContent = '🎨 Efek B&W';
-          showToast('Filter: B&W Komik Halftone 🖤');
+          // Monochrome Clean
+          profilePhotoImg.className = 'w-full h-full object-cover object-center grayscale contrast-110 transition-all duration-300 group-hover/photo:scale-105';
+          if (photoHalftoneOverlay) photoHalftoneOverlay.style.opacity = '0';
+          toggleFilterBtn.textContent = '🎨 Monokrom';
+          showToast('Filter: Monokrom Minimalis');
         } else if (currentFilterMode === 1) {
-          // Noir Deep Black & White
-          profilePhotoImg.className = 'w-full h-full object-cover object-center grayscale contrast-150 brightness-95 transition-all duration-300 group-hover/photo:scale-105';
-          if (photoHalftoneOverlay) photoHalftoneOverlay.style.opacity = '0.45';
-          toggleFilterBtn.textContent = '🕶️ Efek Noir';
-          showToast('Filter: Noir High-Contrast 🕶️');
+          // Deep Contrast
+          profilePhotoImg.className = 'w-full h-full object-cover object-center grayscale contrast-125 brightness-95 transition-all duration-300 group-hover/photo:scale-105';
+          if (photoHalftoneOverlay) photoHalftoneOverlay.style.opacity = '0';
+          toggleFilterBtn.textContent = '🕶️ Kontras';
+          showToast('Filter: High-Contrast Monokrom');
         } else {
-          // Normal Asli
+          // Original Color
           profilePhotoImg.className = 'w-full h-full object-cover object-center transition-all duration-300 group-hover/photo:scale-105';
           if (photoHalftoneOverlay) photoHalftoneOverlay.style.opacity = '0';
           toggleFilterBtn.textContent = '🌈 Warna Asli';
-          showToast('Filter: Warna Asli Foto 🌈');
+          showToast('Filter: Warna Asli Foto');
         }
       });
     }
 
-    // Card Click Interactive Quotes & Comic Bounce
+    // Card Click Interactive Quotes
     if (avatarCard) {
       avatarCard.addEventListener('click', (e) => {
         // Ignore if clicking buttons/inputs/links directly
         if (e.target.closest('button, label, input, a')) return;
+
         playComicSound('zap');
         photoQuoteIndex = (photoQuoteIndex + 1) % photoQuotes.length;
         const quote = photoQuotes[photoQuoteIndex];
@@ -1986,11 +1831,11 @@
         const centerY = rect.height / 2;
         const rotateX = ((y - centerY) / centerY) * -7; // max 7 deg
         const rotateY = ((x - centerX) / centerX) * 7; // max 7 deg
-        avatarCard.style.transform = `perspective(800px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) translateY(-8px) scale(1.02)`;
+        avatarCard.style.setProperty('transform', `perspective(800px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) translateY(-8px) scale(1.02)`, 'important');
       });
 
       avatarCard.addEventListener('mouseleave', () => {
-        avatarCard.style.transform = '';
+        avatarCard.style.removeProperty('transform');
       });
     }
 
@@ -2285,7 +2130,7 @@
     });
 
     // ==========================================
-    // JS: SKILL BADGE CLICK INSPECTOR
+    // JS: SKILL BADGE CLICK HANDLER
     // ==========================================
     const inspectSkillName = document.getElementById('inspectSkillName');
     const inspectSkillDesc = document.getElementById('inspectSkillDesc');
@@ -2297,11 +2142,11 @@
         const level = item.getAttribute('data-level');
         const desc = item.getAttribute('data-detail');
 
-        inspectSkillName.textContent = skill;
-        inspectSkillDesc.textContent = desc;
-        inspectSkillLevel.textContent = level;
+        if (inspectSkillName) inspectSkillName.textContent = skill;
+        if (inspectSkillDesc) inspectSkillDesc.textContent = desc;
+        if (inspectSkillLevel) inspectSkillLevel.textContent = level;
 
-        showToast(`Inspected skill: ${skill} (${level}) ⚡`);
+        showToast(`Skill: ${skill} (${level}) ⚡`);
       });
     });
 
@@ -2346,7 +2191,7 @@
 
         // Validate Name
         if (!userName.value.trim()) {
-          nameError.textContent = '⚠ Please provide your name or alias.';
+          nameError.textContent = 'Silakan masukkan nama Anda.';
           nameError.classList.remove('hidden');
           isValid = false;
         }
@@ -2354,24 +2199,21 @@
         // Validate Email
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!userEmail.value.trim() || !emailRegex.test(userEmail.value.trim())) {
-          emailError.textContent = '⚠ Please enter a valid email address.';
+          emailError.textContent = 'Silakan masukkan alamat email yang valid.';
           emailError.classList.remove('hidden');
           isValid = false;
         }
 
         // Validate Message
         if (!userMessage.value.trim() || userMessage.value.trim().length < 10) {
-          messageError.textContent = '⚠ Please write at least 10 characters for your message.';
+          messageError.textContent = 'Silakan tulis pesan minimal 10 karakter.';
           messageError.classList.remove('hidden');
           isValid = false;
         }
 
         if (isValid) {
-          playComicSound('success');
-          showToast('Transmission dispatched! Alex will reply shortly 🚀');
+          showToast('Pesan berhasil terkirim! Yan akan segera membalas. ✉️');
           contactForm.reset();
-        } else {
-          playComicSound('zap');
         }
       });
     }
@@ -2407,10 +2249,9 @@
     });
 
     // ==========================================
-    // JS: SCROLL PROGRESS BAR & FLOATING TOP BUTTON
+    // JS: SCROLL PROGRESS BAR & NAVBAR ELEVATION
     // ==========================================
     const scrollProgressBar = document.getElementById('scrollProgressBar');
-    const floatingTopBtn = document.getElementById('floatingTopBtn');
     const siteHeader = document.querySelector('header');
 
     let scrollTicking = false;
@@ -2425,21 +2266,12 @@
         scrollProgressBar.style.transform = `scaleX(${progressRatio})`;
       }
 
-      // Toggle Floating Back to Top Button
-      if (floatingTopBtn) {
-        if (scrollY > 280) {
-          floatingTopBtn.classList.add('visible');
-        } else {
-          floatingTopBtn.classList.remove('visible');
-        }
-      }
-
       // Elevate sticky navbar on scroll down
       if (siteHeader) {
         if (scrollY > 15) {
-          siteHeader.classList.add('shadow-brutal');
+          siteHeader.classList.add('shadow-sm');
         } else {
-          siteHeader.classList.remove('shadow-brutal');
+          siteHeader.classList.remove('shadow-sm');
         }
       }
 
@@ -2456,15 +2288,6 @@
     // Initial check on page load
     handleScrollUpdates();
 
-    // Floating Back to Top Button Click
-    if (floatingTopBtn) {
-      floatingTopBtn.addEventListener('click', () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-        playComicSound('pop');
-        showToast('Zooming back to HQ! 🚀');
-      });
-    }
-
     // ==========================================
     // JS: BACK TO TOP BUTTON (FOOTER)
     // ==========================================
@@ -2472,11 +2295,10 @@
     if (backToTopBtn) {
       backToTopBtn.addEventListener('click', () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
-        playComicSound('pop');
       });
     }
 
-    // Smooth navigation click with comic feedback
+    // Smooth navigation click
     document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
       anchor.addEventListener('click', function (e) {
         const targetId = this.getAttribute('href');
@@ -2507,9 +2329,11 @@
           const currentId = entry.target.getAttribute('id');
           navLinks.forEach((link) => {
             if (link.getAttribute('data-section') === currentId) {
-              link.classList.add('underline', 'font-extrabold');
+              link.classList.add('text-neutral-900', 'dark:text-white', 'font-bold');
+              link.classList.remove('text-neutral-600', 'dark:text-neutral-400');
             } else {
-              link.classList.remove('underline', 'font-extrabold');
+              link.classList.remove('text-neutral-900', 'dark:text-white', 'font-bold');
+              link.classList.add('text-neutral-600', 'dark:text-neutral-400');
             }
           });
         }
@@ -2526,10 +2350,10 @@
       if (!container) return;
 
       const toast = document.createElement('div');
-      toast.className = 'pointer-events-auto bg-black text-white font-mono text-xs font-bold px-4 py-3 border-3 border-white shadow-brutal-white max-w-sm flex items-center justify-between gap-3 animate-bounce';
+      toast.className = 'pointer-events-auto bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 text-xs font-semibold px-4 py-3 rounded-xl shadow-xl border border-neutral-800 dark:border-neutral-200 max-w-sm flex items-center justify-between gap-3 transition-all duration-300';
       toast.innerHTML = `
         <span>${message}</span>
-        <button type="button" class="text-white hover:text-neutral-300 ml-2" onclick="this.parentElement.remove()">✕</button>
+        <button type="button" class="text-neutral-400 hover:text-white dark:hover:text-neutral-900 ml-2 cursor-pointer font-bold" onclick="this.parentElement.remove()">✕</button>
       `;
       container.appendChild(toast);
 
@@ -2539,6 +2363,84 @@
         }
       }, 4000);
     }
+
+    // ==========================================
+    // JS: SIMPLE MINIMALIST PRELOADER CONTROLLER
+    // ==========================================
+    (function initSimplePreloader() {
+      const preloader = document.getElementById('sitePreloader');
+      if (!preloader) {
+        document.body.classList.add('page-loaded');
+        const card = document.getElementById('avatarCard');
+        if (card) card.classList.add('avatar-ambient-float');
+        return;
+      }
+
+      const progressBar = document.getElementById('preloaderProgressBar');
+      const progressPercent = document.getElementById('preloaderPercentage');
+
+      // Lock scrolling while loading
+      document.body.classList.add('overflow-hidden');
+
+      let isDismissed = false;
+
+      function dismissPreloader() {
+        if (isDismissed) return;
+        isDismissed = true;
+
+        if (progressBar) progressBar.style.width = '100%';
+        if (progressPercent) progressPercent.textContent = '100%';
+
+        // Brief hold at 100% before smooth upward slide curtain reveal
+        setTimeout(() => {
+          preloader.classList.add('preloader-hidden');
+          document.body.classList.remove('overflow-hidden');
+
+          // Trigger page-loaded when curtain is revealing the hero content
+          setTimeout(() => {
+            document.body.classList.add('page-loaded');
+          }, 150);
+
+          setTimeout(() => {
+            if (preloader.parentElement) {
+              preloader.style.display = 'none';
+            }
+          }, 850);
+        }, 280);
+      }
+
+      // Smooth progress animation over ~1800ms for a deliberate, elegant feel
+      const duration = 1800;
+      const startTime = performance.now();
+
+      function animateProgress(now) {
+        if (isDismissed) return;
+        const elapsed = now - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        
+        // Cubic ease-out for a silky, natural deceleration
+        const easeOut = 1 - Math.pow(1 - progress, 3);
+        const percent = Math.min(Math.round(easeOut * 100), 100);
+
+        if (progressBar) progressBar.style.width = `${percent}%`;
+        if (progressPercent) progressPercent.textContent = `${percent}%`;
+
+        if (progress < 1) {
+          requestAnimationFrame(animateProgress);
+        } else {
+          dismissPreloader();
+        }
+      }
+
+      requestAnimationFrame(animateProgress);
+
+      // Safety timeout: dismiss after 3 seconds under all circumstances
+      setTimeout(() => {
+        if (!isDismissed) {
+          dismissPreloader();
+        }
+      }, 3000);
+    })();
   </script>
 
 </body>
